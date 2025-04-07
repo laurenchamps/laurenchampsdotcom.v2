@@ -9,14 +9,10 @@ const { src = '/lc-headshot-blob.jpg' } = Astro.props
     <div class="grid grid-cols-3 items-center gap-12">
       <div class="col-span-2 flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-4xl md:text-left lg:text-6xl">
-          <slot
-            ><span class="text-gradient">Hi there,</span> I'm Lauren - your systems and automation go-to<span
-              class="color__accent">.</span
-            ></slot
-          >
+          <slot><span class="text-gradient">Hi there,</span> I'm Lauren - your systems and automation go-to.</slot>
         </h1>
         <p class="text-2xl">
-          I help business owners systemise their processes so they can spend less time on admin and more time on what
+          I help business owners streamline their processes so they can spend less time on admin and more time on what
           really matters.
         </p>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
@@ -33,14 +29,14 @@ const { src = '/lc-headshot-blob.jpg' } = Astro.props
 
 <style lang="scss">
   .text-gradient {
-    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--primary-500));
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   :global(.darkmode .text-gradient) {
-    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background: linear-gradient(315deg, var(--secondary-100) 25%, var(--secondary-200));
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

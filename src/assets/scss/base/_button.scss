@@ -8,11 +8,11 @@
     color 0.15s ease-in-out,
     background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
-  border: 3px solid var(--primary-100);
+  // border: 3px solid var(--primary-100);
   border-radius: 3px;
-  background-color: var(--primary-100);
+  background-color: var(--action-color);
   padding: 0.75rem 1rem;
-  color: var(--neutral-900);
+  color: var(--neutral-100);
   font-weight: bold;
   font-size: 1.1em;
   letter-spacing: 0.3;
@@ -148,5 +148,9 @@
 }
 
 .darkmode .button.type-secondary {
-  color: var(--neutral-100);
+  color: var(--dark-100);
+}
+
+.darkmode .button {
+  color: var(--dark-100);
 }

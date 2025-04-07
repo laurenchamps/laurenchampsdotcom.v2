@@ -6,10 +6,42 @@ import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
 import { Accordion, AccordionItem } from 'accessible-astro-components'
+import Testimonial from '../components/Testimonial.astro'
 ---
 
 <DefaultLayout title="Home">
   <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">How I can help</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:puzzle-outline" title="Systems audit">
+          By mapping out your client journey and other key business processes, we'll get a visual representation of what
+          happens when, and identify opportunities to improve efficiency.
+        </Feature>
+        <Feature icon="mdi:workflow-outline" title="Workflow optimisation">
+          With process maps in hand, I can identify bottlenecks, double-handling and opportunities to streamline,
+          implement (or remove) additional tools, automate or outsource.
+        </Feature>
+        <Feature icon="mdi:lightning-bolt-outline" title="Automation">
+          Spend less time on repetitive tasks by automating using native automation features in your existing tools, or
+          connecting with third-party tools like Make or Zapier.
+        </Feature>
+        <Feature icon="mdi:bookshelf" title="Documentation">
+          Do your processes only exist in your head? I'll help you lighten the mental load by creating a set of
+          lightweight guides that document what you do, how you do it, and when to take action.
+        </Feature>
+        <Feature icon="mdi:teach-poll" title="Training">
+          Sharpen your skills with the tools and platforms you already use, or learn how to use new ones.<br />I can
+          help you get the most out of tools like Notion, Asana, Squarespace, Google Workspace, Kajabi, Zapier and more.
+        </Feature>
+        <Feature icon="mdi:laptop-account" title="General VA support">
+          Website updates, file storage, inbox management and other support for your day-to-day operations - I've got
+          you. I cover all this in my VA (virtual assistant) support packages.
+        </Feature>
+      </div>
+    </div>
+  </section>
   <section class="my-64">
     <div class="container grid grid-cols-1 gap-24 md:grid-cols-3">
       <div class="col-span-2 flex flex-col items-start gap-4">
@@ -38,45 +70,14 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
     </div>
   </section>
 
-  <section class="my-64">
-    <div class="container">
-      <h2 class="mb-16 text-6xl">How I can help</h2>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:puzzle-outline" title="Systems audit">
-          By mapping out your client journey and other key business processes, we'll get a visual representation of what
-          happens when, and identify opportunities to improve efficiency.
-        </Feature>
-        <Feature icon="mdi:workflow-outline" title="Workflow optimisation">
-          With process maps in hand, I can identify bottlenecks, double-handling and opportunities to streamline,
-          implement (or remove) additional tools, automate or outsource.
-        </Feature>
-        <Feature icon="mdi:lightning-bolt-outline" title="Automation">
-          Spend less time on repetitive tasks by automating using native automation features in your existing tools, or
-          connecting with third-party tools like Make or Zapier.
-        </Feature>
-        <Feature icon="mdi:bookshelf" title="Documentation">
-          Do your processes only exist in your head? I'll help you lighten the mental load by creating a set of
-          lightweight guides that document what you do, how you do it, and when to take action.
-        </Feature>
-        <Feature icon="mdi:teach-poll" title="Training">
-          Sharpen your skills with the tools and platforms you already use, or learn how to use new ones.<br />I can
-          help you get the most out of tools like Notion, Asana, Squarespace, Google Workspace, Kajabi, Zapier and more.
-        </Feature>
-        <Feature icon="mdi:broom" title="All the things">
-          Website updates, file storage, inbox management and other support for your day-to-day operations - I've got
-          you.
-        </Feature>
-      </div>
-    </div>
-  </section>
-  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
+  <!-- <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
     <h2>WCAG 2.2 AA Compliant</h2>
     <p class="text-2xl">
       Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
       navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
       reaching WCAG AA compliance.
     </p>
-  </ContentMedia>
+  </ContentMedia> -->
   <section class="my-64">
     <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
       <div class="flex flex-col items-start gap-4">
@@ -91,12 +92,12 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
         <Accordion>
           <AccordionItem name="exclusive" title="What is systemisation and do I need it?" open>
             <p>
-              Systemisation is simply creating a system. In relation to your business, it's about creating processes to
-              streamline your operations, improve efficiency and ultimately save you time, effort (and money!). It
+              Systemisation is simply creating a system. In relation to your business, it's about creating systems to
+              streamline your operations, improve efficiency and ultimately save you time & effort (and money!). It
               involves looking at what you do and how you do it, documenting existing processes, standardising tasks and
-              identifying where you can either automate, outsource, or in some cases straight up stop doing a task if
-              it's not adding value. It may involve introducing new software or tools, and if we're working together it
-              will always involve centering you and how you like to work.
+              identifying where you can either automate, outsource, or in some cases actually stop doing a task if it's
+              not adding value. It may involve introducing new software or tools, and if we're working together it will
+              always involve centering you and how you like to work.
             </p>
           </AccordionItem>
           <AccordionItem name="exclusive" title="What is automation? Is that like AI?">
@@ -154,7 +155,27 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       </div>
     </div>
   </section>
-  <section class="mb-32 mt-64">
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Kind words from clients</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-2">
+        <Testimonial name="Nadine Brown" title="Floral designer, educator + mentor | The Ivy Institute">
+          <p>
+            “I can’t tell you how wonderful it is to have someone not only genuinely lovely & honest but who is just so
+            super efficient, skilled & forward thinking as Lauren.
+          </p>
+          <p>
+            From web design to launches, resource and course creation to general admin, client communication and beyond,
+            Lauren handles many facets of my business now. I feel incredibly supported by Lauren, she just gets it!”
+          </p>
+        </Testimonial>
+        <Testimonial icon="mdi:comment-person-outline" name="Honey Atkinson" title="Photographer + videographer">
+          <p>Good stuff.</p>
+        </Testimonial>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="mb-32 mt-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">Counters</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
@@ -164,5 +185,5 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
         <Counter count="18+" title="Months" sub="Since launch" />
       </div>
     </div>
-  </section>
+  </section> -->
 </DefaultLayout>
