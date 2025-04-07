@@ -6,11 +6,11 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
 const {
-  title = 'Astro',
-  description = 'A starter project with accessibility features using Astro static site builder. Contains accessible landmarks, skip links, a dark mode color scheme, better focus outline and keyboard menu navigation.',
+  title = 'Lauren Champs',
+  description = 'I help business owners systemise their processes so they can spend less time on admin and more time on what really matters.',
   url = Astro.site,
   image = 'social-preview-image.png',
-  author = 'Mark Teekman',
+  author = 'Lauren Champs',
 } = Astro.props
 ---
 
@@ -21,7 +21,7 @@ const {
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/lc-logo-favicon.svg" />
 
     <SiteMeta title={title} description={description.substring(0, 100)} url={url} image={image} author={author} />
   </head>

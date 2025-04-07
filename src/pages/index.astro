@@ -1,6 +1,7 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
+import { Icon } from 'astro-icon/components'
 import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
@@ -10,48 +11,64 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
 <DefaultLayout title="Home">
   <Hero />
   <section class="my-64">
+    <div class="container grid grid-cols-1 gap-24 md:grid-cols-3">
+      <div class="col-span-2 flex flex-col items-start gap-4">
+        <h2 class="text-6xl">About Me</h2>
+        <p class="text-2xl">
+          I am a logical thinker who loves nothing more than tackling a problem and coming up with a fix.
+        </p>
+        <p>
+          I love helping purpose-led business owners... I'm a generalist at heart, always exploring new tools and
+          learning new skills. It's this nature that means I thrive getting to know you and your unique business, and
+          looking for solutions that will work for you.
+        </p>
+        <p>
+          Before starting out on my own, I spent over a decade in the higher education sector, from student support to
+          working with research systems and databases to creating websites. The common thread through all my work has
+          been a desire to make digital solutions simpler for the people who use them.
+        </p>
+        <a class="button has-icon" href="#"
+          >See my qualifications
+          <Icon name="ion:arrow-forward-sharp" />
+        </a>
+      </div>
+      <div class="col-span-1">
+        <img class="hidden lg:block" src="/lc-headshot-blob.jpg" alt="Lauren Champs" decoding="async" />
+      </div>
+    </div>
+  </section>
+
+  <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Tailwind CSS">
-          Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.
+      <h2 class="mb-16 text-6xl">How I can help</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:puzzle-outline" title="Systems audit">
+          By mapping out your client journey and other key business processes, we'll get a visual representation of what
+          happens when, and identify opportunities to improve efficiency.
         </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="a11y Components">
-          17 components and counting, all tried and tested for the most optimal accessible experience for your visitors.
+        <Feature icon="mdi:workflow-outline" title="Workflow optimisation">
+          With process maps in hand, I can identify bottlenecks, double-handling and opportunities to streamline,
+          implement (or remove) additional tools, automate or outsource.
         </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          Less worry about formatting your code, let the Astro Prettier integration do the heavy lifting.
+        <Feature icon="mdi:lightning-bolt-outline" title="Automation">
+          Spend less time on repetitive tasks by automating using native automation features in your existing tools, or
+          connecting with third-party tools like Make or Zapier.
         </Feature>
-        <Feature icon="mdi:eslint" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
+        <Feature icon="mdi:bookshelf" title="Documentation">
+          Do your processes only exist in your head? I'll help you lighten the mental load by creating a set of
+          lightweight guides that document what you do, how you do it, and when to take action.
         </Feature>
-        <Feature icon="mdi:book-open-page-variant" title="Blog">
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
+        <Feature icon="mdi:teach-poll" title="Training">
+          Sharpen your skills with the tools and platforms you already use, or learn how to use new ones.<br />I can
+          help you get the most out of tools like Notion, Asana, Squarespace, Google Workspace, Kajabi, Zapier and more.
         </Feature>
-        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Dark mode">
-          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
-        </Feature>
-        <Feature icon="mdi:cog" title="Design System">
-          The theme offers some very handy utilities to help you build your website faster.
-        </Feature>
-        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
-          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+        <Feature icon="mdi:broom" title="All the things">
+          Website updates, file storage, inbox management and other support for your day-to-day operations - I've got
+          you.
         </Feature>
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
-    <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
-    </p>
-  </ContentMedia>
   <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
     <h2>WCAG 2.2 AA Compliant</h2>
     <p class="text-2xl">
@@ -72,28 +89,47 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       </div>
       <div class="space-content">
         <Accordion>
-          <AccordionItem name="exclusive" title="What is WCAG and why is it important?" open>
+          <AccordionItem name="exclusive" title="What is systemisation and do I need it?" open>
             <p>
-              WCAG (Web Content Accessibility Guidelines) is a set of internationally recognized standards for web
-              accessibility. Following WCAG ensures your website is usable by people with various disabilities,
-              including visual, auditory, physical, and cognitive impairments. It's important not just for
-              accessibility, but also for legal compliance, SEO, and reaching a wider audience.
+              Systemisation is simply creating a system. In relation to your business, it's about creating processes to
+              streamline your operations, improve efficiency and ultimately save you time, effort (and money!). It
+              involves looking at what you do and how you do it, documenting existing processes, standardising tasks and
+              identifying where you can either automate, outsource, or in some cases straight up stop doing a task if
+              it's not adding value. It may involve introducing new software or tools, and if we're working together it
+              will always involve centering you and how you like to work.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="What's the difference between ARIA labels and alt text?">
+          <AccordionItem name="exclusive" title="What is automation? Is that like AI?">
             <p>
-              Alt text is specifically for describing images to screen reader users, while ARIA labels (aria-label,
-              aria-labelledby) can describe any element on a page. Alt text is HTML's native way to provide alternative
-              text for images, while ARIA labels are part of the ARIA specification that helps make dynamic content and
-              advanced UI controls more accessible.
+              Automation, in the context I'm using it, means taking something that you or your team currently do
+              manually, and making it happen automatically.
+            </p>
+            <p>
+              To achieve this automation, we create rules that tell a piece of software, 'when this happens, do that',
+              e.g. 'when a form is submitted, send an email'. There are many ways to implement automations, including
+              advanced automations using APIs, webhooks and scripting. In most cases, I'll use 'no-code' or 'low-code'
+              tools which are easier for you to maintain on an ongoing basis.
+            </p>
+            <p>
+              While you may use generative AI tools in your business, this isn't what I'm referring to and is not
+              something I specialise in. In fact, I have some pretty deep ethical concerns when it comes to their use,
+              from <a
+                href="https://theconversation.com/meta-allegedly-used-pirated-books-to-train-ai-australian-authors-have-objected-but-us-courts-may-decide-if-this-is-fair-use-253105"
+                >copyright infringement</a
+              > and devaluing of creatives' work, to <a
+                href="https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes"
+                >reinforcing biases</a
+              > and their <a href="https://www.nature.com/articles/d41586-024-00478-x">enormous environmental costs</a>.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="Why is keyboard navigation important?">
+          <AccordionItem name="exclusive" title="How much do systemisation and automation services cost?">
             <p>
-              Keyboard navigation is essential for users who can't use a mouse, including people with motor
-              disabilities, visual impairments, or those who simply prefer keyboard controls. A website should be fully
-              operable using only a keyboard, with visible focus indicators and logical tab order. This includes being
-              able to access all interactive elements and navigate through content efficiently.
+              The cost of streamlining your business operations varies depending on the size and complexity of your
+              business, your goals, and where you're at right now.
+            </p>
+            <p>
+              I offer a range of services to meet you where you are right now. From ad hoc VA (virtual assistant)
+              support to systems audit and CRM implementation and everything in between. My services start at $295 AUD.
             </p>
           </AccordionItem>
           <AccordionItem name="exclusive" title="What is a sufficient color contrast ratio?">
