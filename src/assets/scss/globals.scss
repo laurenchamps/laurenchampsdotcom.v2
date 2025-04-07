@@ -12,3 +12,15 @@
 @use 'base/color';
 @use 'base/outline';
 @use 'base/space-content';
+
+/* UTILITY CLASSES */
+
+.color__accent {
+  color: var(--accent-300);
+}
+
+.subhead {
+  font-size: 1.3rem;
+  letter-spacing: 0.3;
+  text-transform: uppercase;
+}

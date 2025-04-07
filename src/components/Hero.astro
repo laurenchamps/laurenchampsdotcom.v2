@@ -1,28 +1,32 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-const { src = '/astronaut-hero-img.webp' } = Astro.props
+const { src = '/lc-headshot-blob.jpg' } = Astro.props
 ---
 
 <section class="hero my-24">
   <div class="container">
-    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
-      <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
+    <div class="grid grid-cols-3 items-center gap-12">
+      <div class="col-span-2 flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-4xl md:text-left lg:text-6xl">
+          <slot
+            ><span class="text-gradient">Hi there,</span> I'm Lauren - your systems and automation go-to<span
+              class="color__accent">.</span
+            ></slot
+          >
         </h1>
+        <p class="text-2xl">
+          I help business owners systemise their processes so they can spend less time on admin and more time on what
+          really matters.
+        </p>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/incluud/accessible-astro-starter">
-            <Icon name="ion:star-outline" />
-            Star on GitHub
-          </a>
-          <a class="button has-icon color-secondary" href="https://accessible-astro.incluud.dev/">
-            <Icon name="ion:bookmark-outline" />
-            Read the Docs
+          <a class="button has-icon color-primary" href="#">
+            Contact me
+            <Icon name="ion:arrow-forward-sharp" />
           </a>
         </div>
       </div>
-      <img class="hidden lg:block" src={src} alt="" decoding="async" />
+      <!-- <img class="hidden lg:block" src={src} alt="" decoding="async" /> -->
     </div>
   </div>
 </section>

@@ -4,21 +4,27 @@
 
 .button {
   display: inline-block;
-  padding: 0.75rem 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  color: var(--neutral-900);
-  background-color: var(--primary-100);
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
   border: 3px solid var(--primary-100);
   border-radius: 3px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  background-color: var(--primary-100);
+  padding: 0.75rem 1rem;
+  color: var(--neutral-900);
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 0.3;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
-    background-color: var(--primary-200);
     border-color: var(--primary-200);
+    background-color: var(--primary-200);
+    text-decoration: underline;
   }
 
   &:visited {
@@ -26,68 +32,68 @@
   }
 
   &.color-secondary {
-    background-color: var(--secondary-100);
     border-color: (var(--secondary-100));
+    background-color: var(--secondary-100);
 
     &:hover,
     &:focus {
-      background-color: var(--secondary-400);
       border-color: var(--secondary-400);
+      background-color: var(--secondary-400);
     }
   }
 
   &.color-neutral {
-    background-color: var(--neutral-500);
     border-color: (var(--neutral-500));
+    background-color: var(--neutral-500);
 
     &:hover,
     &:focus {
-      background-color: var(--neutral-400);
       border-color: var(--neutral-400);
+      background-color: var(--neutral-400);
     }
   }
 
   &.color-info {
-    background-color: var(--info-300);
     border-color: (var(--info-300));
+    background-color: var(--info-300);
 
     &:hover,
     &:focus {
-      background-color: var(--info-200);
       border-color: var(--info-200);
+      background-color: var(--info-200);
     }
   }
 
   &.color-success {
-    background-color: var(--success-400);
     border-color: (var(--success-400));
+    background-color: var(--success-400);
 
     &:hover,
     &:focus {
-      background-color: var(--success-300);
       border-color: var(--success-300);
+      background-color: var(--success-300);
     }
   }
 
   &.color-warning {
-    background-color: var(--warning-400);
     border-color: (var(--warning-400));
+    background-color: var(--warning-400);
 
     &:hover,
     &:focus {
-      background-color: var(--warning-300);
       border-color: var(--warning-300);
+      background-color: var(--warning-300);
     }
   }
 
   &.color-error {
-    background-color: var(--error-300);
     border-color: (var(--error-300));
+    background-color: var(--error-300);
 
     &:hover,
     &:focus {
-      background-color: var(--error-200);
       border-color: var(--error-200);
+      background-color: var(--error-200);
     }
   }
 
@@ -135,8 +141,8 @@
     gap: 0.5rem;
 
     [data-icon] {
-      height: auto;
       width: 30px;
+      height: auto;
     }
   }
 }
