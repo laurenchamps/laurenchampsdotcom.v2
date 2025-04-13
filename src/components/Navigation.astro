@@ -2,13 +2,16 @@
 import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
-import logo from '../assets/img/logo.svg'
+import logo from '../assets/img/logo-cog.svg'
+import { Icon } from 'astro-icon/components'
+
+const { name = 'logo-cog' } = Astro.props
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href="/" class="flex items-center gap-2 !no-underline">
-      <Image src={logo} alt="Your Logo" width="47" height="37" />
+      <Icon name="logo-cog" class="logo" alt="Lauren Champs" width="47" height="37" />
       <span class="text-2xl">Lauren Champs</span>
     </a>
     <div class="wrapper">
@@ -225,6 +228,10 @@ import logo from '../assets/img/logo.svg'
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+
+    svg path {
+      fill: var(--action-color);
     }
 
     &.is-desktop {

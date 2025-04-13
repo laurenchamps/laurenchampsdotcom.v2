@@ -1,11 +1,11 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-const { icon = 'mdi:rocket', title = 'Title' } = Astro.props
+const { name = 'magnifying-glass', title = 'Title' } = Astro.props
 ---
 
 <div class="feature flex flex-col gap-4">
-  <Icon name={icon} />
+  <Icon name={name} />
   <div class="content">
     <h3>{title}</h3>
     <p>
