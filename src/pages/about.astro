@@ -1,0 +1,47 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import { Accordion, AccordionItem } from 'accessible-astro-components'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<DefaultLayout title="About">
+  <ContentMedia imgSrc="/lc-headshot-blob.jpg" reverseImg={true}>
+    <h1>About Lauren</h1>
+    <p class="text-2xl">I help purpose-led business owners manage streamline their operations behind-the-scenes.</p>
+    <p>
+      Before starting my own business, I built up experience from 15+ years the higher education sector. A common thread
+      running through these roles was always being the one who knew how things worked, the Excel wizard, the one who was
+      good with that new bit of technology.
+    </p>
+    <p>
+      Throughout my life I have been driven by curiosity – not one to be defined by any job role, I've sought to find
+      opportunities to keep learning, to develop skills, and to use those skills in a meaningful way. Helping small
+      business owners achieve their goals gives me a huge sense of satisfaction.
+    </p>
+    <p>
+      This curiosity is not confined to my work life – I've learnt to sew and knit, so most of the items in my wardrobe
+      are made by me. I love reading, and am
+    </p>
+  </ContentMedia>
+
+  <div class="space-content">
+    <ul>
+      <li>
+        15+ years in administrative roles in universities spanning IT project delivery, research systems, web + digital
+        content management and customer service
+      </li>
+      <li>5+ years supporting a local small business with online order fulfilment</li>
+      <li>
+        Countless hours researching and learning automation, task management, project management & CRM platforms
+        including Make, Notion, Asana, Zapier, Squarespace, Sprout Studio, Kajabi and more
+      </li>
+      <li>CS50x–Introduction to Computer Science | Harvard University Online | 2023</li>
+      <li>Foundations of Web Dev | Code Like A Girl | 2021</li>
+      <li>Agile Project Management | CA Technologies | 2016</li>
+      <li>Cert III in Sport Coaching | 2014</li>
+      <li>Certificate in Teaching English to Speakers of Other Languages | Oxford TEFL Prague | 2007</li>
+      <li>Bachelor of Physiotherapy | University of South Australia | 2003</li>
+    </ul>
+  </div>
+</DefaultLayout>

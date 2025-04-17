@@ -7,6 +7,8 @@
 ul:not([class]),
 ol:not([class]) {
   margin-left: 1rem;
+  margin-left: 1rem;
+  list-style: revert;
 
   ul,
   ol {
@@ -46,8 +48,8 @@ ol.incremented {
     }
 
     &::before {
-      content: counters(item, '.') '. ';
       counter-increment: item;
+      content: counters(item, '.') '. ';
     }
 
     &:last-child {

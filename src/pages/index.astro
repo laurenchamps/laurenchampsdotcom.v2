@@ -15,35 +15,40 @@ import Testimonial from '../components/Testimonial.astro'
     <div class="container">
       <h2 class="mb-16 text-6xl">How I can help</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-        <Feature name="doc-magnifying" title="Systems audit">
-          By mapping out your client journey and other key business processes, we'll get a visual representation of what
-          happens when, and identify opportunities to improve efficiency.
-        </Feature>
         <Feature name="workflow" title="Workflow optimisation">
-          With process maps in hand, I can identify bottlenecks, double-handling and opportunities to streamline,
-          implement (or remove) additional tools, automate or outsource.
+          I can take a look at your current processes and identify any bottlenecks, double-handling and opportunities to
+          streamline, automate or delegate so you can get some time back in your day.
+        </Feature>
+        <Feature name="screen-code" title="System setup">
+          If you're looking to implement a new tool in your business (such as a CRM) but are feeling a bit overwhelmed
+          by the technical side of it or just don't have the time to set it up, I can do it for you or with you.
         </Feature>
         <Feature name="lightning" title="Automation">
           Spend less time on repetitive tasks by automating using native automation features in your existing tools, or
           connecting with third-party tools like Make or Zapier.
         </Feature>
-        <Feature name="114" title="Documentation">
+        <Feature name="books" title="Documentation">
           Do your processes only exist in your head? I'll help you lighten the mental load by creating a set of
           lightweight guides that document what you do, how you do it, and when to take action.
         </Feature>
-        <Feature name="209" title="Training">
-          Sharpen your skills with the tools and platforms you already use, or learn how to use new ones.<br />I can
-          help you get the most out of tools like Notion, Asana, Squarespace, Google Workspace, Kajabi, Zapier and more.
+        <Feature name="canvas" title="Training">
+          If you're struggling to use some of your existing tools or feel like you could be getting more out of them if
+          you knew a bit more. I have experience with Notion, Asana, Squarespace, Google Workspace, Kajabi, Zapier,
+          Make, Sprout Studio and more.
         </Feature>
-        <Feature name="checkboxes" title="General VA support">
-          Website updates, file storage, inbox management and other support for your day-to-day operations - I've got
-          you. I cover all this in my VA (virtual assistant) support packages.
+        <Feature name="checkboxes" title="Getting things done">
+          If you can never seem to get on top of your to-do list, let me take some of the load. Whether it's website
+          updates, file storage, inbox management, document creation, email campaigns or other support for your
+          day-to-day operations, I've got you. I cover all this in my VA (virtual assistant) support packages.
         </Feature>
       </div>
     </div>
   </section>
   <section class="my-64">
     <div class="container grid grid-cols-1 gap-24 md:grid-cols-3">
+      <div class="col-span-1">
+        <img class="lg:block" src="/lc-headshot-apr2025.jpg" alt="Lauren Champs" decoding="async" />
+      </div>
       <div class="col-span-2 flex flex-col items-start gap-4">
         <h2 class="text-6xl">About Me</h2>
         <p class="text-2xl">
@@ -59,13 +64,10 @@ import Testimonial from '../components/Testimonial.astro'
           working with research systems and databases to creating websites. The common thread through all my work has
           been a desire to make digital solutions simpler for the people who use them.
         </p>
-        <a class="button has-icon" href="#"
+        <a class="button has-icon" href="/about"
           >See my qualifications
           <Icon name="ion:arrow-forward-sharp" />
         </a>
-      </div>
-      <div class="col-span-1">
-        <img class="hidden lg:block" src="/lc-headshot-blob.jpg" alt="Lauren Champs" decoding="async" />
       </div>
     </div>
   </section>
@@ -81,12 +83,7 @@ import Testimonial from '../components/Testimonial.astro'
   <section class="my-64">
     <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
       <div class="flex flex-col items-start gap-4">
-        <h2 class="text-6xl">FAQ</h2>
-        <p class="text-2xl">
-          This section demonstrates how to effectively use the Accordion component to organize and display frequently
-          asked questions in an accessible and user-friendly way.
-        </p>
-        <a class="button" href="/faq">Contact support team</a>
+        <h2 class="text-5xl font-light">Frequently asked questions</h2>
       </div>
       <div class="space-content">
         <Accordion>
@@ -110,17 +107,6 @@ import Testimonial from '../components/Testimonial.astro'
               e.g. 'when a form is submitted, send an email'. There are many ways to implement automations, including
               advanced automations using APIs, webhooks and scripting. In most cases, I'll use 'no-code' or 'low-code'
               tools which are easier for you to maintain on an ongoing basis.
-            </p>
-            <p>
-              While you may use generative AI tools in your business, this isn't what I'm referring to and is not
-              something I specialise in. In fact, I have some pretty deep ethical concerns when it comes to their use,
-              from <a
-                href="https://theconversation.com/meta-allegedly-used-pirated-books-to-train-ai-australian-authors-have-objected-but-us-courts-may-decide-if-this-is-fair-use-253105"
-                >copyright infringement</a
-              > and devaluing of creatives' work, to <a
-                href="https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes"
-                >reinforcing biases</a
-              > and their <a href="https://www.nature.com/articles/d41586-024-00478-x">enormous environmental costs</a>.
             </p>
           </AccordionItem>
           <AccordionItem name="exclusive" title="How much do systemisation and automation services cost?">
