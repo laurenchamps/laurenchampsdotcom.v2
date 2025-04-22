@@ -3,99 +3,141 @@
 // | -------------------------------------------------------------
 
 .button {
-  display: inline-block;
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out;
-  // border: 3px solid var(--primary-100);
-  border-radius: 3px;
-  background-color: var(--action-color);
-  padding: 0.75rem 1rem;
-  color: var(--neutral-100);
-  font-weight: bold;
-  font-size: 1.1em;
-  letter-spacing: 0.3;
-  text-align: center;
+  --focus-color: var(--secondary-500);
+  --button-bg: var(--primary-500);
+  --button-arrow: currentColor;
+  --button-text: #ffffff;
+  --button-gutter: 0.8ch;
+  --button-border: none;
+  --button-border-radius: 0; /* 999em; /* Creates pill shape */
+  --button-x-padding: 1.4em;
+  --button-y-padding: 1em;
+  --button-text-transform: uppercase;
+  --button-letter-spacing: var(--uppercase-tracking);
+  --button-font-size: var(--size-step-0);
+  --button-font-weight: 600;
+  --focus-color: var(--secondary-400);
+
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  gap: var(--button-gutter);
+  cursor: pointer;
+  border: var(--button-border);
+  border-radius: var(--button-border-radius);
+  background: var(--button-bg);
+  padding: var(--button-y-padding) var(--button-x-padding);
+  color: var(--button-text);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  line-height: var(--leading-flat);
+  letter-spacing: var(--button-letter-spacing);
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: var(--button-text-transform);
+}
 
-  &:hover,
-  &:focus {
-    border-color: var(--primary-200);
-    background-color: var(--primary-200);
-    text-decoration: underline;
-  }
+.button:hover {
+  filter: brightness(115%);
+}
 
-  &:visited {
-    background-color: var(--primary-400);
-  }
+.button:active {
+  transform: scale(99%);
+}
 
-  &.color-secondary {
-    border-color: (var(--secondary-100));
-    background-color: var(--secondary-100);
+.button {
+  // display: inline-block;
+  // transition:
+  //   color 0.15s ease-in-out,
+  //   background-color 0.15s ease-in-out,
+  //   border-color 0.15s ease-in-out;
+  // // border: 3px solid var(--primary-100);
+  // border-radius: 3px;
+  // background-color: var(--action-color);
+  // padding: 0.75rem 1rem;
+  // color: var(--neutral-100);
+  // font-weight: bold;
+  // font-size: 1.1em;
+  // letter-spacing: 0.3;
+  // text-align: center;
+  // text-decoration: none;
+  // text-transform: uppercase;
 
-    &:hover,
-    &:focus {
-      border-color: var(--secondary-400);
-      background-color: var(--secondary-400);
-    }
-  }
+  // &:hover,
+  // &:focus {
+  //   border-color: var(--primary-200);
+  //   background-color: var(--primary-200);
+  //   text-decoration: underline;
+  // }
 
-  &.color-neutral {
-    border-color: (var(--neutral-500));
-    background-color: var(--neutral-500);
+  // &:visited {
+  //   background-color: var(--primary-400);
+  // }
 
-    &:hover,
-    &:focus {
-      border-color: var(--neutral-400);
-      background-color: var(--neutral-400);
-    }
-  }
+  // &.color-secondary {
+  //   border-color: (var(--secondary-100));
+  //   background-color: var(--secondary-100);
 
-  &.color-info {
-    border-color: (var(--info-300));
-    background-color: var(--info-300);
+  //   &:hover,
+  //   &:focus {
+  //     border-color: var(--secondary-400);
+  //     background-color: var(--secondary-400);
+  //   }
+  // }
 
-    &:hover,
-    &:focus {
-      border-color: var(--info-200);
-      background-color: var(--info-200);
-    }
-  }
+  // &.color-neutral {
+  //   border-color: (var(--neutral-500));
+  //   background-color: var(--neutral-500);
 
-  &.color-success {
-    border-color: (var(--success-400));
-    background-color: var(--success-400);
+  //   &:hover,
+  //   &:focus {
+  //     border-color: var(--neutral-400);
+  //     background-color: var(--neutral-400);
+  //   }
+  // }
 
-    &:hover,
-    &:focus {
-      border-color: var(--success-300);
-      background-color: var(--success-300);
-    }
-  }
+  // &.color-info {
+  //   border-color: (var(--info-300));
+  //   background-color: var(--info-300);
 
-  &.color-warning {
-    border-color: (var(--warning-400));
-    background-color: var(--warning-400);
+  //   &:hover,
+  //   &:focus {
+  //     border-color: var(--info-200);
+  //     background-color: var(--info-200);
+  //   }
+  // }
 
-    &:hover,
-    &:focus {
-      border-color: var(--warning-300);
-      background-color: var(--warning-300);
-    }
-  }
+  // &.color-success {
+  //   border-color: (var(--success-400));
+  //   background-color: var(--success-400);
 
-  &.color-error {
-    border-color: (var(--error-300));
-    background-color: var(--error-300);
+  //   &:hover,
+  //   &:focus {
+  //     border-color: var(--success-300);
+  //     background-color: var(--success-300);
+  //   }
+  // }
 
-    &:hover,
-    &:focus {
-      border-color: var(--error-200);
-      background-color: var(--error-200);
-    }
-  }
+  // &.color-warning {
+  //   border-color: (var(--warning-400));
+  //   background-color: var(--warning-400);
+
+  //   &:hover,
+  //   &:focus {
+  //     border-color: var(--warning-300);
+  //     background-color: var(--warning-300);
+  //   }
+  // }
+
+  // &.color-error {
+  //   border-color: (var(--error-300));
+  //   background-color: var(--error-300);
+
+  //   &:hover,
+  //   &:focus {
+  //     border-color: var(--error-200);
+  //     background-color: var(--error-200);
+  //   }
+  // }
 
   &.size-tiny {
     padding: 0.125rem 0.25rem;
@@ -152,5 +194,6 @@
 }
 
 .darkmode .button {
+  background-color: var(--secondary-100);
   color: var(--dark-100);
 }

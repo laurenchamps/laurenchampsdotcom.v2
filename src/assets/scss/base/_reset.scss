@@ -1,14 +1,18 @@
-// | -------------------------------------------------------------
-// | > Reset
-// | -------------------------------------------------------------
+/* RESET */
+
+/* Modern reset: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove animations for users where reduced motion is preferred */
 
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-
   @media (prefers-reduced-motion: reduce) {
-    scroll-behavior: auto;
-
     body * {
       animation-duration: 0s !important;
       animation-delay: 0s !important;
@@ -16,47 +20,90 @@ html {
   }
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-blockquote,
+/* Remove default margin in favour of better control in authored CSS */
 body,
-figure,
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
-hr,
-li,
-ol,
 p,
-pre,
-ul {
-  margin: 0;
-  padding: 0;
+figure,
+blockquote,
+dl,
+dd {
+  margin-block: 0;
 }
 
-ul:where([class]) {
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
-button,
-input,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  letter-spacing: inherit;
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
 }
 
-input[type='text'],
-textarea {
-  width: 100%;
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* a elements that don't have a class get default styles */
+a:not([class]) {
+  color: currentColor;
+  text-decoration-skip-ink: auto;
+}
+
+// Override tailwind text-decoration settings
+a {
+  text-decoration: revert;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Remove padding of 40px introduced by user agent stylesheet in Chrome */
+ul {
+  padding-inline-start: 0;
 }
 
 fieldset {
@@ -67,19 +114,6 @@ fieldset {
 legend {
   margin-bottom: 0.5rem;
   max-width: 100%;
-}
-
-button,
-input,
-textarea {
-  border: 1px solid gray;
-}
-
-button {
-  border-radius: 0;
-  background-color: transparent;
-  padding: 0.75em 1em;
-  line-height: 1;
 }
 
 button * {

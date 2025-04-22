@@ -11,9 +11,9 @@ import Testimonial from '../components/Testimonial.astro'
 
 <DefaultLayout title="Home">
   <Hero />
-  <section class="my-64">
+  <section class="my-36">
     <div class="container">
-      <h2 class="mb-16 text-6xl">How I can help</h2>
+      <h2 class="mb-16">How I can help</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
         <Feature name="workflow" title="Workflow optimisation">
           I can take a look at your current processes and identify any bottlenecks, double-handling and opportunities to
@@ -44,13 +44,13 @@ import Testimonial from '../components/Testimonial.astro'
       </div>
     </div>
   </section>
-  <section class="my-64">
+  <section class="my-36">
     <div class="container grid grid-cols-1 gap-24 md:grid-cols-3">
       <div class="col-span-1">
         <img class="lg:block" src="/lc-headshot-apr2025.jpg" alt="Lauren Champs" decoding="async" />
       </div>
       <div class="col-span-2 flex flex-col items-start gap-4">
-        <h2 class="text-6xl">About Me</h2>
+        <h2>About Me</h2>
         <p class="text-2xl">
           I am a logical thinker who loves nothing more than tackling a problem and coming up with a fix.
         </p>
@@ -64,9 +64,9 @@ import Testimonial from '../components/Testimonial.astro'
           working with research systems and databases to creating websites. The common thread through all my work has
           been a desire to make digital solutions simpler for the people who use them.
         </p>
-        <a class="button has-icon" href="/about"
+        <a class="button has-icon" href="/about#qualifications"
           >See my qualifications
-          <Icon name="ion:arrow-forward-sharp" />
+          <Icon name="arrow-right" />
         </a>
       </div>
     </div>
@@ -80,12 +80,12 @@ import Testimonial from '../components/Testimonial.astro'
       reaching WCAG AA compliance.
     </p>
   </ContentMedia> -->
-  <section class="my-64">
+  <section class="my-36">
     <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
       <div class="flex flex-col items-start gap-4">
-        <h2 class="text-5xl font-light">Frequently asked questions</h2>
+        <h2>Frequently asked questions</h2>
       </div>
-      <div class="space-content">
+      <div class="space-content accordion-section">
         <Accordion>
           <AccordionItem name="exclusive" title="What is systemisation and do I need it?" open>
             <p>
@@ -141,9 +141,9 @@ import Testimonial from '../components/Testimonial.astro'
       </div>
     </div>
   </section>
-  <section class="my-64">
+  <section class="my-36">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Kind words from clients</h2>
+      <h2 class="mb-16">Kind words from clients</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-2">
         <Testimonial name="Nadine Brown" title="Floral designer, educator + mentor | The Ivy Institute">
           <p>
@@ -155,7 +155,7 @@ import Testimonial from '../components/Testimonial.astro'
             Lauren handles many facets of my business now. I feel incredibly supported by Lauren, she just gets it!”
           </p>
         </Testimonial>
-        <Testimonial icon="mdi:comment-person-outline" name="Honey Atkinson" title="Photographer + videographer">
+        <Testimonial name="Honey Atkinson" title="Photographer + film maker">
           <p>Good stuff.</p>
         </Testimonial>
       </div>

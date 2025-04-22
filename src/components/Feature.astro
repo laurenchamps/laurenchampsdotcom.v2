@@ -6,8 +6,8 @@ const { name = 'magnifying-glass', title = 'Title' } = Astro.props
 
 <div class="feature flex flex-col gap-4">
   <Icon name={name} />
-  <div class="content">
-    <h3>{title}</h3>
+  <div class="content flow">
+    <h3 class="text-3xl font-bold">{title}</h3>
     <p>
       <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, corporis.</slot>
     </p>
@@ -21,6 +21,7 @@ const { name = 'magnifying-glass', title = 'Title' } = Astro.props
     position: relative;
     padding: 2rem;
     width: calc(100% - 0.5rem);
+    font-size: var(--size-step--1);
 
     > * {
       position: relative;
@@ -57,11 +58,11 @@ const { name = 'magnifying-glass', title = 'Title' } = Astro.props
   :global(.feature [data-icon]) {
     width: 4rem;
     height: auto;
-    color: var(--bright-color);
+    // color: var(--bright-color);
   }
 
   :global(.darkmode .feature::before) {
-    box-shadow: 0 0 0 6px var(--dark-100);
+    box-shadow: 0 0 0 4px var(--secondary-100);
     background-color: var(--dark-100);
   }
 </style>

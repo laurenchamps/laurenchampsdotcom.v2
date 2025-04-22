@@ -1,30 +1,38 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-import Hero from '../components/Hero.astro'
+import Badges from '../components/Badges.astro'
 import { Accordion, AccordionItem } from 'accessible-astro-components'
 import ContentMedia from '../components/ContentMedia.astro'
 ---
 
 <DefaultLayout title="About">
-  <ContentMedia imgSrc="/lc-headshot-blob.jpg" reverseImg={true}>
-    <h1>About Lauren</h1>
-    <p class="text-2xl">I help purpose-led business owners streamline their operations behind-the-scenes.</p>
-    <p>
-      Before starting my own business, I built up experience from 15+ years the higher education sector. A common thread
-      running through these roles was always being the one who knew how things worked, the Excel wizard, the one who was
-      good with that new bit of technology.
-    </p>
-    <p>
-      Throughout my life I have been driven by curiosity – not one to be defined by any job role, I've sought to find
-      opportunities to keep learning, to develop skills, and to use those skills in a meaningful way. Helping small
-      business owners achieve their goals gives me a huge sense of satisfaction.
-    </p>
-    <p>
-      This curiosity is not confined to my work life – I've learnt to sew and knit, so most of the items in my wardrobe
-      are made by me. I love reading, and am
-    </p>
-  </ContentMedia>
-  <section class="my-64">
+  <section class="mt-28">
+    <div class="flow container">
+      <div class="grid grid-cols-3 items-center gap-20">
+        <div class="col-span-2 flex flex-col items-center gap-8 md:items-start">
+          <h1>About Lauren</h1>
+          <p>I help purpose-led business owners streamline their operations behind-the-scenes.</p>
+          <p>
+            Before starting my own business, I built up experience from 15+ years the higher education sector. A common
+            thread running through these roles was always being the one who knew how things worked, the Excel wizard,
+            the one who was good with that new bit of technology.
+          </p>
+          <p>
+            Throughout my life I have been driven by curiosity – not one to be defined by any job role, I've sought to
+            find opportunities to keep learning, to develop skills, and to use those skills in a meaningful way. Helping
+            small business owners achieve their goals gives me a huge sense of satisfaction.
+          </p>
+          <p>
+            This curiosity is not confined to my work life – when I'm not at my laptop you can often find me sewing,
+            knitting, reading or out exploring the world around me on a bushwalk.
+          </p>
+        </div>
+        <img class="lg:block" src="/lc-headshot-pink-circle.png" alt="Lauren Champs" decoding="async" />
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-16 mt-32" id="qualifications">
     <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
       <div class="flex flex-col items-start gap-4">
         <h2 class="text-5xl font-light">My qualifications</h2>
@@ -38,10 +46,21 @@ import ContentMedia from '../components/ContentMedia.astro'
           <li>5+ years supporting a local small business with online order fulfilment</li>
           <li>
             Countless hours researching and learning automation, task management, project management & CRM platforms
-            including Make, Notion, Asana, Zapier, Squarespace, Sprout Studio, Kajabi and more
+            including <a href="https://www.make.com/en">Make</a>, <a href="https://www.notion.com/">Notion</a>, <a
+              href="https://app.asana.com/">Asana</a
+            >, <a href="https://zapier.com/">Zapier</a>, <a href="https://www.squarespace.com/">Squarespace</a>, <a
+              href="https://getsproutstudio.com/">Sprout Studio</a
+            >, <a href="https://kajabi.com/">Kajabi</a> and more
           </li>
-          <li>CS50x–Introduction to Computer Science | Harvard University Online | 2023</li>
-          <li>Foundations of Web Dev | Code Like A Girl | 2021</li>
+          <li>
+            <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science"
+              >CS50x–Introduction to Computer Science</a
+            > | Harvard University Online | 2023
+          </li>
+          <li>
+            <a href="https://www.codelikeagirl.com/courses/web-development/">Foundations of Web Development</a> | Code Like
+            A Girl | 2021
+          </li>
           <li>Agile Project Management | CA Technologies | 2016</li>
           <li>Cert III in Sport Coaching | 2014</li>
           <li>Certificate in Teaching English to Speakers of Other Languages | Oxford TEFL Prague | 2007</li>
@@ -49,5 +68,8 @@ import ContentMedia from '../components/ContentMedia.astro'
         </ul>
       </div>
     </div>
+  </section>
+  <section class="container">
+    <Badges />
   </section>
 </DefaultLayout>
