@@ -24,3 +24,9 @@
   letter-spacing: 0.3;
   text-transform: uppercase;
 }
+
+.ribbon {
+  background-color: var(--ribbon-color);
+  width: 100%;
+  height: var(--space-s);
+}

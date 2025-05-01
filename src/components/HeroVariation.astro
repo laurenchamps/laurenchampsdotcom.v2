@@ -7,20 +7,15 @@ const { src = '/lc-headshot-blob.jpg' } = Astro.props
 <section class="hero my-24">
   <div class="container">
     <div class="grid grid-cols-3 items-center gap-12">
-      <div class="col-span-2 flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-4xl md:text-left lg:text-6xl">
-          <slot>Let's get your business operations in order, so you can get back to what you do best</slot>
-        </h1>
-        <div class="flex flex-col gap-6 min-[500px]:flex-row">
-          <a class="button has-icon" href="/contact">
-            Services
-            <Icon name="arrow-right" />
-          </a>
-          <a class="button has-icon" href="/contact">
-            Contact me
-            <Icon name="arrow-right" />
-          </a>
-        </div>
+      <img class="hidden lg:block" src="/laptop.jpeg" alt="" decoding="async" />
+      <div class="col-span-2 ml-24 flex flex-col items-start gap-8 md:items-start">
+        <h2 class="text-center text-3xl md:text-left lg:text-6xl">
+          <slot>Hello, I'm Lauren.</slot>
+        </h2>
+        <p class="text-xl">
+          I'm a virtual assistant specialising in systems and automation based in Adelaide. I love collaborating with
+          small business owners to streamline their operations and get things done.
+        </p>
       </div>
     </div>
   </div>

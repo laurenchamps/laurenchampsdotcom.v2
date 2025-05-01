@@ -5,14 +5,14 @@ import { DarkMode } from 'accessible-astro-components'
 // import logo from '../assets/img/logo-LC.svg'
 import { Icon } from 'astro-icon/components'
 
-const { name = 'logo-lc' } = Astro.props
+const { name = 'logo-l' } = Astro.props
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
-    <a href="/" class="flex items-center gap-2 !no-underline">
-      <Icon name="logo-LC" alt="Lauren Champs" width="47" height="37" />
-      <span class="text-2xl tracking-tight">Lauren Champs</span>
+    <a href="/" class="!no-underline">
+      <!-- <Icon name="logo-l" alt="Lauren Champs" width="47" height="47" /> -->
+      <Icon name="full-logo-laurenchamps" alt="Lauren Champs" height="100" width="180" />
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -230,10 +230,6 @@ const { name = 'logo-lc' } = Astro.props
       justify-content: space-between;
     }
 
-    svg path {
-      fill: var(--action-color);
-    }
-
     &.is-desktop {
       .desktop-menu {
         position: static;
@@ -281,8 +277,14 @@ const { name = 'logo-lc' } = Astro.props
     nav {
       > ul {
         display: flex;
-        gap: 1.5rem;
+        gap: 2.4rem;
+
+        font-weight: var(--font-regular);
+        font-size: var(--size-step-1);
+        line-height: var(--leading-flat);
+        // letter-spacing: var(--uppercase-tracking);
         list-style-type: none;
+        text-transform: lowercase;
 
         a,
         button {
@@ -303,7 +305,7 @@ const { name = 'logo-lc' } = Astro.props
         }
 
         .is-active {
-          font-weight: bold;
+          font-weight: 500;
         }
       }
     }

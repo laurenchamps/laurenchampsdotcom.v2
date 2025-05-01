@@ -12,7 +12,7 @@ const currentYear = new Date().getFullYear()
     </div>
     <div class="footer__copyright">
       <p>&copy; Lauren Champs {currentYear}</p>
-      <p>
+      <p class="text-sm">
         Website built by me with <a href="https://astro.build/">Astro</a> using the <a
           href="https://accessible-astro-starter.incluud.dev/">Accessible Starter Theme</a
         >.
@@ -34,7 +34,7 @@ const currentYear = new Date().getFullYear()
 
 <style>
   footer {
-    background-color: var(--bg-grey);
+    background-color: var(--olive-200);
     padding-block: var(--space-2xl);
   }
 
@@ -63,11 +63,7 @@ const currentYear = new Date().getFullYear()
       grid-template-columns: 1fr;
     }
 
-    .footer__contact {
-      grid-column-start: 1;
-    }
-
-    .footer__copyright {
+    .footer__acknowledgement {
       grid-column-start: 1;
     }
   }

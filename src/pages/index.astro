@@ -1,6 +1,8 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
+import HeroVariation from '../components/HeroVariation.astro'
+import Masthead from '../components/Masthead.astro'
 import { Icon } from 'astro-icon/components'
 import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
@@ -10,18 +12,44 @@ import Testimonial from '../components/Testimonial.astro'
 ---
 
 <DefaultLayout title="Home">
-  <Hero />
+  <div class="container">
+    <Masthead />
+  </div>
+  <!-- <Hero /> -->
+  <HeroVariation />
+  <section>
+    <div class="container">
+      <h2 class="mb-16">Are your systems getting you down?</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <Feature title="Never enough time in the day" />
+        <Feature title="As you've grown, you've added tools as you've needed to and now...">
+          <p>
+            ...you have a stack of subscriptions but no real connection between everything and you're not even sure what
+            some of them are for or whether you need them.
+          </p>
+        </Feature>
+        <Feature title="Your business is growing but it's just you, and things are starting to fall through the cracks">
+          <p>
+            ...you have a stack of subscriptions but no real connection between everything and you're not even sure what
+            some of them are for or whether you need them.
+          </p>
+        </Feature>
+        <p>What's the cost of not fixing your operations?</p>
+      </div>
+    </div>
+  </section>
+
   <section class="my-36">
     <div class="container">
-      <h2 class="mb-16">How I can help</h2>
+      <h2 class="mb-16">I'm here to help</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
         <Feature name="workflow" title="Workflow optimisation">
-          I can take a look at your current processes and identify any bottlenecks, double-handling and opportunities to
-          streamline, automate or delegate so you can get some time back in your day.
+          I can analyse your current processes to identify bottlenecks, double-handling and opportunities to streamline
+          or automate so you can get time back in your day.
         </Feature>
         <Feature name="screen-code" title="System setup">
-          If you're looking to implement a new tool in your business (such as a CRM) but are feeling a bit overwhelmed
-          by the technical side of it or just don't have the time to set it up, I can do it for you or with you.
+          If you're looking to implement a new tool in your business (such as a CRM) but are feeling overwhelmed by the
+          technical aspect or just don't have the time, I can do it for you or with you.
         </Feature>
         <Feature name="lightning" title="Automation">
           Spend less time on repetitive tasks by automating using native automation features in your existing tools, or
@@ -50,7 +78,7 @@ import Testimonial from '../components/Testimonial.astro'
         <img class="lg:block" src="/lc-headshot-apr2025.jpg" alt="Lauren Champs" decoding="async" />
       </div>
       <div class="col-span-2 flex flex-col items-start gap-4">
-        <h2>About Me</h2>
+        <h2>Who I am</h2>
         <p class="text-2xl">
           I am a logical thinker who loves nothing more than tackling a problem and coming up with a fix.
         </p>
@@ -83,58 +111,103 @@ import Testimonial from '../components/Testimonial.astro'
   <section class="my-36">
     <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
       <div class="flex flex-col items-start gap-4">
+        <h2>My values</h2>
+      </div>
+      <div class="space-content accordion-section">
+        <h3 class="text-3xl font-medium">Authentic</h3>
+        <p>
+          I'm a personal, down-to-earth and approachable introvert. Living my values is important to me, so you can
+          expect me to be honest, genuine and always doing my best.
+        </p>
+        <h3 class="text-3xl font-medium">Resourceful</h3>
+        <p>
+          I'm good at identifying problems and love coming up with practical solutions. I'm adaptable, open to new ideas
+          and always seeking new knowledge and better ways of working.
+        </p>
+        <h3 class="text-3xl font-medium">Prudent</h3>
+        <p>
+          I do things properly and don't cut corners. I am efficient but I don’t sacrifice quality for speed. I take a
+          measured approach and have your long-term success in mind.
+        </p>
+        <h3 class="text-3xl font-medium">Dependable</h3>
+        <p>
+          I'm with you every step of the way, committed to your success and always ready to roll up my sleeves and get
+          to work.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="my-36">
+    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
+      <div class="flex flex-col items-start gap-4">
         <h2>Frequently asked questions</h2>
       </div>
       <div class="space-content accordion-section">
         <Accordion>
-          <AccordionItem name="exclusive" title="What is systemisation and do I need it?" open>
+          <!-- <AccordionItem name="exclusive" title="What is systemisation and do I need it?" open>
             <p>
               Systemisation is simply creating a system. In relation to your business, it's about creating systems to
               streamline your operations, improve efficiency and ultimately save you time & effort (and money!). It
               involves looking at what you do and how you do it, documenting existing processes, standardising tasks and
-              identifying where you can either automate, outsource, or in some cases actually stop doing a task if it's
+              identifying where you can either automate, delegate, or in some cases actually stop doing a task if it's
               not adding value. It may involve introducing new software or tools, and if we're working together it will
               always involve centering you and how you like to work.
             </p>
-          </AccordionItem>
+          </AccordionItem> -->
           <AccordionItem name="exclusive" title="What is automation? Is that like AI?">
             <p>
               Automation, in the context I'm using it, means taking something that you or your team currently do
               manually, and making it happen automatically.
             </p>
             <p>
-              To achieve this automation, we create rules that tell a piece of software, 'when this happens, do that',
-              e.g. 'when a form is submitted, send an email'. There are many ways to implement automations, including
-              advanced automations using APIs, webhooks and scripting. In most cases, I'll use 'no-code' or 'low-code'
-              tools which are easier for you to maintain on an ongoing basis.
+              To achieve this, we create rules that tell a piece of software, 'when this happens, do that', e.g. 'when a
+              form is submitted, send an email'. There are many ways to implement automations, including advanced
+              automations using APIs, webhooks and scripting. In most cases, I'll use 'no-code' or 'low-code' tools
+              which are easier for you to maintain on an ongoing basis.
+            </p>
+            <p>
+              Automation may incorporate AI tools if you're using them, but AI isn't an essential part of this process.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="How much do systemisation and automation services cost?">
+          <AccordionItem name="exclusive" title="How much does it cost?">
             <p>
               The cost of streamlining your business operations varies depending on the size and complexity of your
               business, your goals, and where you're at right now.
             </p>
             <p>
               I offer a range of services to meet you where you are right now. From ad hoc VA (virtual assistant)
-              support to systems audit and CRM implementation and everything in between. My services start at $295 AUD.
+              support to systems audits and CRM implementation and everything in between. Systems and automation work I
+              generally need to custom quote based on the scope, so please reach out for a chat and we can see what may
+              be possible within your budget. For general VA services, my rates are between $45 and $65 per hour
+              depending on the number of hours you require per month.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="What is a sufficient color contrast ratio?">
+          <AccordionItem name="exclusive" title="What makes you different from other VAs?">
             <p>
-              According to WCAG 2.2 AA standards, text should have a minimum contrast ratio of 4.5:1 against its
-              background for regular text, and 3:1 for large text (18pt or 14pt bold). For non-text elements like icons
-              or buttons, a minimum ratio of 3:1 is required. This ensures content is readable for users with visual
-              impairments or color blindness.
+              I have a strong technical background, having undertaken foundational studies in computer science and web
+              development. I'm also not affiliated with any particular software products, so if I make recommendations
+              to you, they'll be based on my research as well as experience using a range of platforms, with a focus on
+              how well they suit your requirements.
+            </p>
+            <p>
+              No matter what stage you are at in your business, or how much chaos you feel is going on in behind the
+              scenes, you won't get any judgment from me - just a genuine desire to help.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="How do I make custom components accessible?">
+          <AccordionItem
+            name="exclusive"
+            title="Can you help if I already have a CRM/other platform in place but it's not working out as well as I'd hoped?"
+          >
             <p>
-              To make custom components accessible, focus on these key aspects: use semantic HTML where possible,
-              implement proper keyboard support, add appropriate ARIA attributes, manage focus when needed, and ensure
-              adequate color contrast. Always test with screen readers and keyboard navigation. Consider using
-              established design patterns from the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"
-                >ARIA Authoring Practices Guide</a
-              >.
+              Sure can. It's tempting to think that the latest software or tool that everyone's talking about is going
+              to turn your chaos into order and have you living your business dreams. And maybe it will. But it doesn't
+              always work like that. No software is perfect, and the tool is only one part - you also have to learn it,
+              set it up optimally, fit it in with your other platforms and have systems in place to keep everything
+              running smoothly.
+            </p>
+            <p>
+              If you're struggling with a new tool, or looking for a refresh with something you've been using for a
+              while, I can help you make some tweaks to your existing setup to get you back on track.
             </p>
           </AccordionItem>
         </Accordion>
@@ -143,7 +216,7 @@ import Testimonial from '../components/Testimonial.astro'
   </section>
   <section class="my-36">
     <div class="container">
-      <h2 class="mb-16">Kind words from clients</h2>
+      <h2 class="mb-16">What it's like to work with me</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-2">
         <Testimonial name="Nadine Brown" title="Floral designer, educator + mentor | The Ivy Institute">
           <p>

@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-const { name = 'magnifying-glass', title = 'Title' } = Astro.props
+const { name = 'doc-magnifying', title = 'Title' } = Astro.props
 ---
 
 <div class="feature flex flex-col gap-4">
@@ -42,7 +42,7 @@ const { name = 'magnifying-glass', title = 'Title' } = Astro.props
       z-index: 1;
       inset: 0;
       // box-shadow: 0 0 0 6px var(--neutral-100);
-      border: 3px solid var(--neutral-700);
+      border: 3px solid var(--dark-green-100);
       border-radius: 1rem;
       background-color: var(--neutral-100);
     }
@@ -51,7 +51,7 @@ const { name = 'magnifying-glass', title = 'Title' } = Astro.props
       z-index: 0;
       inset: 0.5rem -0.35rem -0.35rem 0.5rem;
       border-radius: 1rem;
-      background-color: var(--neutral-700);
+      background-color: var(--dark-green-100);
     }
   }
 
@@ -62,7 +62,7 @@ const { name = 'magnifying-glass', title = 'Title' } = Astro.props
   }
 
   :global(.darkmode .feature::before) {
-    box-shadow: 0 0 0 4px var(--secondary-100);
-    background-color: var(--dark-100);
+    box-shadow: 0 0 0 4px var(--peach-100);
+    background-color: var(--peach-100);
   }
 </style>

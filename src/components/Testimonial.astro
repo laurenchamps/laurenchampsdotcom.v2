@@ -22,15 +22,16 @@ const { icon = 'speech-bubbles', name = 'Name', title = 'Title' } = Astro.props
     position: relative;
     padding: 2rem;
     width: calc(100% - 0.5rem);
+    font-size: var(--size-step--1);
 
     .testimonial__name {
       font-weight: 700;
-      font-size: var(--size-step-1);
+      font-size: var(--size-step-0);
     }
 
     .testimonial__role {
       font-weight: 500;
-      font-size: var(--size-step-0);
+      font-size: var(--size-step--1);
       letter-spacing: var(--uppercase-tracking);
       text-transform: uppercase;
     }

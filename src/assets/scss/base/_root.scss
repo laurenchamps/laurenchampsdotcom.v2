@@ -29,12 +29,12 @@
   --uppercase-tracking: 0.04ch;
   --wrapper-max-width: 1360px;
   --bg-grey: var(--grey-300);
+  --ribbon-color: var(--dark-green-100);
 
   /* Sizing and spacing */
   /* FLUID TYPE SCALE */
 
   /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
   --size-step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
   --size-step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
   --size-step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -44,37 +44,6 @@
   --size-step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
   --size-step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
   --size-step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
-
-  /* FLUID SPACING */
-  /* @link https://utopia.fyi/space/calculator?c=320,15,1.125,1240,16,1.25,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|xs-l|m-l&g=s,l,xl,12 */
-
-  --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
-  --space-2xs: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
-  --space-xs: clamp(0.6875rem, 0.6658rem + 0.1087vw, 0.75rem);
-  --space-s: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-  --space-m: clamp(1.4375rem, 1.4158rem + 0.1087vw, 1.5rem);
-  --space-l: clamp(1.875rem, 1.8315rem + 0.2174vw, 2rem);
-  --space-xl: clamp(2.8125rem, 2.7473rem + 0.3261vw, 3rem);
-  --space-2xl: clamp(3.75rem, 3.663rem + 0.4348vw, 4rem);
-  --space-3xl: clamp(5.625rem, 5.4946rem + 0.6522vw, 6rem);
-  --space-4xl: clamp(6.5625rem, 6.4103rem + 0.7609vw, 7rem);
-
-  /* One-up pairs */
-  --space-3xs-2xs: clamp(0.25rem, 0.163rem + 0.4348vw, 0.5rem);
-  --space-2xs-xs: clamp(0.5rem, 0.413rem + 0.4348vw, 0.75rem);
-  --space-xs-s: clamp(0.6875rem, 0.5788rem + 0.5435vw, 1rem);
-  --space-s-m: clamp(0.9375rem, 0.7418rem + 0.9783vw, 1.5rem);
-  --space-m-l: clamp(1.4375rem, 1.2418rem + 0.9783vw, 2rem);
-  --space-l-xl: clamp(1.875rem, 1.4837rem + 1.9565vw, 3rem);
-  --space-xl-2xl: clamp(2.8125rem, 2.3995rem + 2.0652vw, 4rem);
-  --space-2xl-3xl: clamp(3.75rem, 2.9674rem + 3.913vw, 6rem);
-
-  /* Custom pairs */
-  --space-s-l: clamp(0.9375rem, 0.5679rem + 1.8478vw, 2rem);
-  --space-xs-l: clamp(0.6875rem, 0.231rem + 2.2826vw, 2rem);
-  --space-m-l: clamp(1.4375rem, 1.2418rem + 0.9783vw, 2rem);
-  --space-m-2xl: clamp(1.4375rem, 0.5462rem + 4.4565vw, 4rem);
-  --space-m-3xl: clamp(1.4375rem, -0.1495rem + 7.9348vw, 6rem);
 
   /* Leading text (ratio-based leading/line-height values) */
   --leading-micro: 0.85;
@@ -94,6 +63,34 @@
   --viewport-mid: 760px;
   --viewport-large: 940px;
   --viewport-max: 1350px;
+
+  /* FLUID SPACING */
+  /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|6,s-l&g=s,l,xl,12 */
+
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+  --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+  --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+  --space-4xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
+  --space-2xs-xs: clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
+  --space-xs-s: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
+  --space-s-m: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
+  --space-m-l: clamp(1.6875rem, 1.4049rem + 1.413vw, 2.5rem);
+  --space-l-xl: clamp(2.25rem, 1.7283rem + 2.6087vw, 3.75rem);
+  --space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vw, 5rem);
+  --space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vw, 7.5rem);
+  --space-3xl-4xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
 }
 
 /* COMPOSITIONS */

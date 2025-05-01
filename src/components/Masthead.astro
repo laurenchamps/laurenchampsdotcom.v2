@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="masthead">
+  <h1 class="masthead__heading text-6xl">
+    Let's get your business operations in order so you can get back to what you do best.
+  </h1>
+  <div class="repel masthead__meta">
+    <div class="contact__btngrp btngrp">
+      <a class="button has-icon" href="#">
+        Services
+        <Icon name="arrow-right" />
+      </a>
+      <a class="button has-icon" href="/contact">
+        Contact me
+        <Icon name="arrow-right" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .masthead {
+    display: grid;
+    grid-template-rows: 1fr minmax(min-content, 16rem);
+    /* grid-template-columns: 1fr 25%; */
+    gap: 1.5em 1.5vi;
+  }
+
+  .masthead__heading {
+    grid-column: 1/-1;
+    align-self: end;
+    /* margin-block-start: var(--space-m-xl); */
+  }
+
+  .masthead__subhead {
+    grid-row: 2;
+    grid-column: 1/-1;
+  }
+</style>

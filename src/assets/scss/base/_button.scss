@@ -4,17 +4,17 @@
 
 .button {
   --focus-color: var(--secondary-500);
-  --button-bg: var(--primary-500);
+  --button-bg: var(--olive-100);
   --button-arrow: currentColor;
   --button-text: #ffffff;
   --button-gutter: 0.8ch;
   --button-border: none;
   --button-border-radius: 0; /* 999em; /* Creates pill shape */
-  --button-x-padding: 1.4em;
-  --button-y-padding: 1em;
+  --button-x-padding: 1.2em;
+  --button-y-padding: 0.8em;
   --button-text-transform: uppercase;
   --button-letter-spacing: var(--uppercase-tracking);
-  --button-font-size: var(--size-step-0);
+  --button-font-size: var(--size-step--1);
   --button-font-weight: 600;
   --focus-color: var(--secondary-400);
 
