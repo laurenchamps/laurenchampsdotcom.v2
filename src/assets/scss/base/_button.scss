@@ -4,15 +4,15 @@
 
 .button {
   --focus-color: var(--secondary-500);
-  --button-bg: var(--olive-100);
+  --button-bg: var(--dark-green-100);
   --button-arrow: currentColor;
-  --button-text: #ffffff;
+  --button-text: var(--pink-100);
   --button-gutter: 0.8ch;
   --button-border: none;
   --button-border-radius: 0; /* 999em; /* Creates pill shape */
   --button-x-padding: 1.2em;
   --button-y-padding: 0.8em;
-  --button-text-transform: uppercase;
+  --button-text-transform: lowercase;
   --button-letter-spacing: var(--uppercase-tracking);
   --button-font-size: var(--size-step--1);
   --button-font-weight: 600;

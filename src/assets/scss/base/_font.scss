@@ -194,16 +194,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-:is(h1, h2, h3) {
+:is(h1) {
+  line-height: var(--leading-flat);
+  text-wrap: balance;
+}
+
+:is(h2, h3) {
   line-height: var(--leading-fine);
   text-wrap: balance;
 }
 
 h1 {
-  max-width: 20ch;
-  color: var(--dark-green-100);
+  max-width: 22ch;
   font-weight: 500;
-  font-size: var(--size-step-6);
+  font-size: var(--size-step-5);
 }
 
 h2 {
