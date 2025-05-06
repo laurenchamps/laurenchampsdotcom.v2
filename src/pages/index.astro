@@ -14,32 +14,57 @@ import Testimonial from '../components/Testimonial.astro'
 <DefaultLayout title="Home">
   <Masthead />
   <!-- <Hero /> -->
-  <HeroVariation />
-  <section>
-    <div class="container">
-      <h2 class="mb-16">Are your systems getting you down?</h2>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-        <Feature title="Never enough time in the day" />
-        <Feature title="As you've grown, you've added tools as you've needed to and now...">
-          <p>
-            ...you have a stack of subscriptions but no real connection between everything and you're not even sure what
-            some of them are for or whether you need them.
-          </p>
-        </Feature>
-        <Feature title="Your business is growing but it's just you, and things are starting to fall through the cracks">
-          <p>
-            ...you have a stack of subscriptions but no real connection between everything and you're not even sure what
-            some of them are for or whether you need them.
-          </p>
-        </Feature>
-        <p>What's the cost of not fixing your operations?</p>
+  <section class="my-36">
+    <div class="container grid grid-cols-1 gap-24 md:grid-cols-3">
+      <div class="col-span-1">
+        <img class="img-offset lg:block" src="/laptop.jpeg" alt="Lauren Champs" decoding="async" />
+      </div>
+      <div class="flow col-span-2 flex flex-col items-start gap-4">
+        <h2>If you're feeling overwhelmed and weighed down by your business admin, you're in the right place.</h2>
+        <p>
+          Your business is growing, but things are starting to fall through the cracks (or you're spending way too much
+          time making sure they don't) and you're not giving your clients the experience you dreamed of. You know you
+          need to get your systems sorted, but you don't know where to start.
+        </p>
+        <p>
+          You need someone who's logical and has the technical skills to deliver, who also gets you, and what you do.
+          Someone who can explain everything without the technical jargon, and set you up to continue managing your
+          business yourself.
+        </p>
+        <p>
+          I'll set you up with the right systems, tools and strategies to simplify your processes, free up your time and
+          deliver a client experience that truly reflects your brilliance.
+        </p>
       </div>
     </div>
   </section>
-
-  <section class="my-36">
+  <section class="testimonial-section my-36">
+    <div class="testimonial-container container">
+      <div class="testimonial flow">
+        <div class="avatar">
+          <img src="" alt="" />
+        </div>
+        <p class="testimonial-headline">“Working with Lauren has been a game-changer for my business.”</p>
+        <p class="testimonial-content">
+          “Lauren created a complete CRM setup tailored to my photography and video work, and it’s completely changed
+          how I operate. Everything feels smoother, more professional, and more sustainable.”
+        </p>
+        <div class="testimonial-meta">
+          <p class="testimonial-name">
+            Honey Atkinson<br />
+            <span class="testimonial-business">Honey - Photo + Film</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="my-36">
     <div class="container">
       <h2 class="mb-16">I'm here to help</h2>
+      <p class="mb-12">
+        No matter how bit or small your business, I can help you level up your systems, reclaim your time and grow your
+        business.
+      </p>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
         <Feature name="workflow" title="Workflow optimisation">
           I can analyse your current processes to identify bottlenecks, double-handling and opportunities to streamline
@@ -70,33 +95,15 @@ import Testimonial from '../components/Testimonial.astro'
       </div>
     </div>
   </section>
-  <section class="my-36">
-    <div class="container grid grid-cols-1 gap-24 md:grid-cols-3">
-      <div class="col-span-1">
-        <img class="lg:block" src="/lc-headshot-apr2025.jpg" alt="Lauren Champs" decoding="async" />
-      </div>
-      <div class="col-span-2 flex flex-col items-start gap-4">
-        <h2>Who I am</h2>
-        <p class="text-2xl">
-          I am a logical thinker who loves nothing more than tackling a problem and coming up with a fix.
-        </p>
-        <p>
-          I love helping purpose-led business owners... I'm a generalist at heart, always exploring new tools and
-          learning new skills. It's this nature that means I thrive getting to know you and your unique business, and
-          looking for solutions that will work for you.
-        </p>
-        <p>
-          Before starting out on my own, I spent over a decade in the higher education sector, from student support to
-          working with research systems and databases to creating websites. The common thread through all my work has
-          been a desire to make digital solutions simpler for the people who use them.
-        </p>
-        <a class="button has-icon" href="/about#qualifications"
-          >See my qualifications
-          <Icon name="arrow-right" />
-        </a>
-      </div>
+  <section class="-mt-16">
+    <div class="btngrp container">
+      <a class="button has-icon" href="/contact"
+        >Get in touch
+        <Icon name="arrow-right" />
+      </a>
     </div>
   </section>
+  <HeroVariation />
 
   <!-- <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
     <h2>WCAG 2.2 AA Compliant</h2>
@@ -152,7 +159,7 @@ import Testimonial from '../components/Testimonial.astro'
               always involve centering you and how you like to work.
             </p>
           </AccordionItem> -->
-          <AccordionItem name="exclusive" title="What is automation? Is that like AI?">
+          <AccordionItem name="exclusive" title="What is automation?">
             <p>
               Automation, in the context I'm using it, means taking something that you or your team currently do
               manually, and making it happen automatically.
@@ -227,7 +234,25 @@ import Testimonial from '../components/Testimonial.astro'
           </p>
         </Testimonial>
         <Testimonial name="Honey Atkinson" title="Photographer + film maker">
-          <p>Good stuff.</p>
+          <p>
+            “Working with Lauren has been a game-changer for my business. As a one-woman operation, I’d been wanting to
+            improve my client experience but was struggling without proper systems in place. Lauren created a complete
+            CRM setup tailored to my photography and video work, and it’s completely changed how I operate. Everything
+            feels smoother, more professional, and more sustainable.
+          </p>
+          <p>
+            She also put together clear SOPs so I can confidently manage things myself, and she sorted out a bunch of
+            small tech issues I’d been avoiding. Her communication is always clear and timely, and she’s great at
+            explaining things without jargon. I’ve really appreciated her transparency throughout the process — I always
+            know where things are at and what’s coming next.
+          </p>
+
+          <p>
+            Lauren’s brain works at a high level in all the areas mine doesn’t! It’s such a relief to work with someone
+            who can see the big picture clearly, especially when I tend to get caught up in the small details — as so
+            many of us do when running a business. She’s warm, honest, and incredibly easy to work with. It’s been
+            amazing having someone with her skills on hand, without the need to bring on permanent staff.”
+          </p>
         </Testimonial>
       </div>
     </div>
@@ -244,3 +269,67 @@ import Testimonial from '../components/Testimonial.astro'
     </div>
   </section> -->
 </DefaultLayout>
+
+<style>
+  .testimonial-section {
+    background-color: var(--neutral-100);
+    height: 600px;
+  }
+
+  .testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .testimonial {
+    position: relative;
+    border-radius: 20px;
+    background-color: #073242;
+    padding: 30px 50px;
+    max-width: 60ch;
+    color: #faf9f8;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .testimonial-headline {
+    margin-top: 70px;
+    color: #ff6f61;
+    font-size: 1.6rem;
+  }
+
+  /* // .testimonial-content {
+//   font-size: 1.1rem;
+// } */
+
+  .avatar {
+    position: absolute;
+    top: -45px;
+    left: calc(50% - 45px);
+    width: 90px;
+    height: 90px;
+  }
+
+  .avatar img {
+    border-radius: 100%;
+    background-color: hotpink;
+    width: 90px;
+    height: 90px;
+  }
+
+  .testimonial-name {
+    margin-top: 2rem;
+    font-weight: bold;
+  }
+
+  .testimonial-business {
+    display: block;
+    margin-top: 0.32;
+    font-weight: normal;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+</style>

@@ -26,7 +26,12 @@
 }
 
 .ribbon {
+  margin-block-start: 0;
   background-color: var(--ribbon-color);
   width: 100%;
   height: var(--space-s);
+}
+
+.img-offset {
+  transform: translateX(-200px);
 }

@@ -42,27 +42,31 @@ const { name = 'doc-magnifying', title = 'Title' } = Astro.props
       z-index: 1;
       inset: 0;
       // box-shadow: 0 0 0 6px var(--neutral-100);
-      border: 3px solid var(--dark-green-100);
+      border: 3px solid var(--action-color);
       border-radius: 1rem;
-      background-color: var(--neutral-100);
+      background-color: var(--action-color);
     }
 
-    // &::after {
-    //   z-index: 0;
-    //   inset: 0.5rem -0.35rem -0.35rem 0.5rem;
-    //   border-radius: 1rem;
-    //   background-color: var(--dark-green-100);
-    // }
+    &::after {
+      z-index: 0;
+      inset: 0.5rem -0.35rem -0.35rem 0.5rem;
+      border-radius: 1rem;
+      background-color: var(--action-color);
+    }
   }
 
   :global(.feature [data-icon]) {
     width: 4rem;
     height: auto;
-    // color: var(--bright-color);
+    color: var(--dark-primary);
   }
 
   :global(.darkmode .feature::before) {
-    box-shadow: 0 0 0 4px var(--peach-100);
-    background-color: var(--peach-100);
+    border: 3px solid var(--action-color);
+    background-color: var(--primary-background);
+  }
+
+  :global(.darkmode .feature::after) {
+    background-color: var(--action-color);
   }
 </style>

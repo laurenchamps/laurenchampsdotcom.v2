@@ -4,9 +4,9 @@
 
 .button {
   --focus-color: var(--secondary-500);
-  --button-bg: var(--dark-green-100);
+  --button-bg: var(--dark-green-950);
   --button-arrow: currentColor;
-  --button-text: var(--pink-100);
+  --button-text: var(--pink-300);
   --button-gutter: 0.8ch;
   --button-border: none;
   --button-border-radius: 0; /* 999em; /* Creates pill shape */
@@ -194,6 +194,6 @@
 }
 
 .darkmode .button {
-  background-color: var(--secondary-100);
-  color: var(--dark-100);
+  background-color: var(--pink-300);
+  color: var(--dark-green-950);
 }

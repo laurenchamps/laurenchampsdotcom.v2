@@ -7,35 +7,31 @@ const currentYear = new Date().getFullYear()
 <footer>
   <section class="container py-8">
     <div class="footer__contact">
-      <p>Lauren Champs (she/her)</p>
+      <div class="footer__logo"><img src="/compact-logo-dk-bg-laurenchamps.png" alt="Lauren Champs" /></div>
       <p><a href="mailto:hello@laurenchamps.com">hello@laurenchamps.com</a></p>
     </div>
-    <div class="footer__copyright">
-      <p>&copy; Lauren Champs {currentYear}</p>
-      <p class="text-sm">
-        Website built by me with <a href="https://astro.build/">Astro</a> using the <a
-          href="https://accessible-astro-starter.incluud.dev/">Accessible Starter Theme</a
-        >.
-      </p>
+    <div class="footer__copyright flow">
+      <small>
+        &copy; Lauren Champs {currentYear} | Website built by me with <a href="https://astro.build/">Astro</a> using the
+        <a href="https://accessible-astro-starter.incluud.dev/">Accessible Starter Theme</a>.
+      </small>
     </div>
     <div class="footer__acknowledgement flow">
-      <p>I live and work on the stolen lands of the Kaurna people.</p>
-      <p>
-        I pay my respects to Kaurna Elders past and present, and acknowledge the deep and ongoing connection the Kaurna
-        people have to their land, water and cultural practices.
-      </p>
-      <p>
-        I acknowledge all Indigenous peoples around the world whose lands and cultures have been devastated by
-        colonisation.
-      </p>
+      <small
+        >I live and work on the stolen lands of the Kaurna people. I pay my respects to Kaurna Elders past and present,
+        and acknowledge the deep and ongoing connection the Kaurna people have to their land, water and cultural
+        practices. I acknowledge all Indigenous peoples around the world whose lands and cultures have been devastated
+        by colonisation.
+      </small>
     </div>
   </section>
 </footer>
 
 <style>
   footer {
-    background-color: var(--olive-200);
+    background-color: var(--dark-green-950);
     padding-block: var(--space-2xl);
+    color: var(--neutral-100);
   }
 
   .container {
@@ -48,6 +44,7 @@ const currentYear = new Date().getFullYear()
   .footer__acknowledgement {
     grid-row: 1/-1;
     grid-column: 2/-1;
+    align-content: end;
   }
 
   .footer__acknowledgement p {
@@ -56,6 +53,10 @@ const currentYear = new Date().getFullYear()
 
   .footer__copyright {
     grid-column: 1/2;
+  }
+
+  .footer__logo {
+    max-width: 200px;
   }
 
   @media (max-width: 700px) {

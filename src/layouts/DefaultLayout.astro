@@ -43,34 +43,42 @@ const {
         --font-family-special: 'Satoshi', sans-serif;
         // light theme
         --font-color: var(--neutral-900);
-        --action-color: var(--primary-500);
-        --action-color-state: var(--primary-500);
-        --bright-color: var(--primary-200);
-        --background: var(--neutral-100);
-        --primary-background: var(--primary-100);
-        --neutral-background: var(--neutral-200);
+        --action-color: var(--accent-primary);
+        --action-color-state: var(--accent-primary);
+        --bright-color: var(--accent-primary);
+        --background: var(--light-secondary);
+        --primary-background: var(--light-primary);
+        --neutral-background: var(--light-secondary);
       }
 
       // dark color scheme overrides
       .darkmode {
         --font-color: var(--neutral-100);
-        --action-color: var(--secondary-100);
-        --action-color-state: var(--secondary-500);
-        --background: var(--dark-green-100);
-        --primary-background: var(--primary-500);
-        --neutral-background: var(--neutral-900);
-        --bg-grey: var(--grey-900);
-        --ribbon-color: var(--secondary-100);
-        --bg-color: var(--dark-green-100);
-        --bg-opacity: 0.75;
+        --action-color: var(--light-primary);
+        --action-color-state: var(--light-primary);
+        --background: var(--dark-primary);
+        --primary-background: var(--dark-primary);
+        --neutral-background: var(--light-secondary);
+        --ribbon-color: var(--light-primary);
+        --logo-name: var(--light-secondary);
+        --logo-loop: var(--dark-primary);
+        --logo-badge: var(--light-primary);
       }
 
       .feature svg path {
-        fill: var(--olive-100);
+        fill: var(--light-primary);
       }
 
-      .logo svg path {
-        fill: var(--secondary-100);
+      svg .name {
+        fill: var(--logo-name);
+      }
+
+      svg .loop {
+        fill: var(--logo-loop);
+      }
+
+      svg .badge {
+        fill: var(--logo-badge);
       }
 
       // sticky footer on low content pages

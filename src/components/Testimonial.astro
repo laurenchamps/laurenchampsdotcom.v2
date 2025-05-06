@@ -54,28 +54,28 @@ const { icon = 'speech-bubbles', name = 'Name', title = 'Title' } = Astro.props
     &::before {
       z-index: 1;
       inset: 0;
-      box-shadow: 0 0 0 6px var(--neutral-100);
-      border: 3px solid var(--olive-100);
+      // box-shadow: 0 0 0 6px var(--neutral-100);
+      border: 3px solid var(--accent-secondary);
       border-radius: 1rem;
-      background-color: var(--neutral-100);
+      // background-color: var(--accent-primary);
     }
 
     &::after {
       z-index: 0;
-      inset: 1rem -0.85rem -0.85rem 1rem;
+      inset: 0.5rem -0.35rem -0.35rem 0.5rem;
       border-radius: 1rem;
-      background-color: var(--olive-100);
+      background-color: var(--accent-secondary);
     }
   }
 
   :global(.testimonial [data-icon]) {
     width: 4rem;
     height: auto;
-    color: var(--dark-green-100);
+    color: var(--action-color);
   }
 
   :global(.darkmode .testimonial::before) {
-    box-shadow: 0 0 0 6px var(--dark-100);
-    background-color: var(--dark-100);
+    box-shadow: 0 0 0 6px var(--primary-background);
+    background-color: var(--primary-background);
   }
 </style>
