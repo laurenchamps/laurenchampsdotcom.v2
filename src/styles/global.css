@@ -1,0 +1,816 @@
+/* Variables */
+
+:root {
+  --gutter: var(--space-m-l);
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 300ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --stroke-width: 1px;
+  --stroke: var(--stroke-width) dashed var(--color-dark);
+  --stroke-solid: (--stroke-width) solid var(--color-dark);
+  --radius-s: 0.2rem;
+  --radius-m: 0.75rem;
+  --radius-l: 2.5rem;
+  --uppercase-tracking: 0.04ch;
+  --wrapper-max-width: 1360px;
+  --ribbon-color: var(--color-dark);
+  --logo-name: var(--color-dark);
+  --logo-loop: var(--color-primary);
+  --logo-badge: var(--color-dark);
+
+  /* Colors */
+  --color-dark: #073242;
+  --color-dark-glare: hsl(196, 51%, 25%);
+  --color-dark-text: #2b2d2e;
+  --color-mid: #fffaf5;
+  --color-light: #ffffff;
+  --color-primary: #ddeddb;
+  --color-accent: hsl(5, 100%, 69%);
+
+  /* Fonts */
+  --font-base: 'Satoshi', 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif';
+  --font-heading: 'Satoshi', 'sans-serif';
+  /* --font-mono: 'DM Mono', 'monospace'; */
+
+  /* Sizing and spacing */
+  /* FLUID TYPE SCALE */
+
+  /* @link https://utopia.fyi/type/calculator?c=320,15,1.125,1240,16,1.25,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|xs-l|m-l&g=s,l,xl,12 */
+
+  --size-step-000: clamp(0.64rem, 0.7758rem + -0.1752vw, 0.7407rem);
+  --size-step-00: clamp(0.8rem, 0.8449rem + -0.058vw, 0.8333rem);
+  --size-step-0: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --size-step-1: clamp(1.0547rem, 0.9868rem + 0.3397vw, 1.25rem);
+  --size-step-2: clamp(1.1865rem, 1.0557rem + 0.6539vw, 1.5625rem);
+  --size-step-3: clamp(1.3348rem, 1.1198rem + 1.0753vw, 1.9531rem);
+  --size-step-4: clamp(1.5017rem, 1.1748rem + 1.6343vw, 2.4414rem);
+  --size-step-5: clamp(1.6894rem, 1.2155rem + 2.3693vw, 3.0518rem);
+  --size-step-6: clamp(1.9006rem, 1.2348rem + 3.3289vw, 3.8147rem);
+  --size-step-7: clamp(2.1382rem, 1.2233rem + 4.5743vw, 4.7684rem);
+  --size-step-8: clamp(2.4054rem, 1.1689rem + 6.1827vw, 5.9605rem);
+
+  /* FLUID SPACING */
+  /* @link https://utopia.fyi/space/calculator?c=320,15,1.125,1240,16,1.25,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|xs-l|m-l&g=s,l,xl,12 */
+
+  --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
+  --space-2xs: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
+  --space-xs: clamp(0.6875rem, 0.6658rem + 0.1087vw, 0.75rem);
+  --space-s: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --space-m: clamp(1.4375rem, 1.4158rem + 0.1087vw, 1.5rem);
+  --space-l: clamp(1.875rem, 1.8315rem + 0.2174vw, 2rem);
+  --space-xl: clamp(2.8125rem, 2.7473rem + 0.3261vw, 3rem);
+  --space-2xl: clamp(3.75rem, 3.663rem + 0.4348vw, 4rem);
+  --space-3xl: clamp(5.625rem, 5.4946rem + 0.6522vw, 6rem);
+  --space-4xl: clamp(6.5625rem, 6.4103rem + 0.7609vw, 7rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.163rem + 0.4348vw, 0.5rem);
+  --space-2xs-xs: clamp(0.5rem, 0.413rem + 0.4348vw, 0.75rem);
+  --space-xs-s: clamp(0.6875rem, 0.5788rem + 0.5435vw, 1rem);
+  --space-s-m: clamp(0.9375rem, 0.7418rem + 0.9783vw, 1.5rem);
+  --space-m-l: clamp(1.4375rem, 1.2418rem + 0.9783vw, 2rem);
+  --space-l-xl: clamp(1.875rem, 1.4837rem + 1.9565vw, 3rem);
+  --space-xl-2xl: clamp(2.8125rem, 2.3995rem + 2.0652vw, 4rem);
+  --space-2xl-3xl: clamp(3.75rem, 2.9674rem + 3.913vw, 6rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(0.9375rem, 0.5679rem + 1.8478vw, 2rem);
+  --space-xs-l: clamp(0.6875rem, 0.231rem + 2.2826vw, 2rem);
+  --space-m-l: clamp(1.4375rem, 1.2418rem + 0.9783vw, 2rem);
+  --space-m-2xl: clamp(1.4375rem, 0.5462rem + 4.4565vw, 4rem);
+  --space-m-3xl: clamp(1.4375rem, -0.1495rem + 7.9348vw, 6rem);
+
+  /* Leading text (ratio-based leading/line-height values) */
+  --leading-micro: 0.85;
+  --leading-flat: 1;
+  --leading-fine: 1.2;
+  --leading-standard: 1.4;
+  --leading-loose: 1.7;
+
+  /* Text weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /* Viewports */
+  --viewport-min: 300px;
+  --viewport-mid: 760px;
+  --viewport-large: 940px;
+  --viewport-max: 1350px;
+}
+
+/* Fonts */
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/DMSerifDisplay-Regular.woff2') format('woff2');
+  font-family: 'DM Serif Display';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/DMSerifDisplay-Italic.woff2') format('woff2');
+  font-family: 'DM Serif Display';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/HedvigLettersSerif-Regular-VariableFont_opsz.woff2') format('woff2');
+  font-family: 'Hedvig Letters Serif';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/Satoshi-Italic.woff2') format('woff2');
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/Satoshi-MediumItalic.woff2') format('woff2');
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/Satoshi-Black.woff2') format('woff2');
+  font-family: 'Satoshi';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/dm-mono-v14-latin-500.woff2') format('woff2');
+  font-family: 'DM Mono';
+  font-display: swap;
+}
+
+/* RESET */
+/* Modern reset: https://piccalil.li/blog/a-more-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* a elements that don't have a class get default styles */
+a:not([class]) {
+  color: currentColor;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Remove padding of 40px introduced by user agent stylesheet in Chrome */
+ul {
+  padding-inline-start: 0;
+}
+
+.prose {
+  --flow-space: var(--space-l);
+}
+
+/* UTILITY CLASSES */
+
+.color__accent {
+  color: var(--color-accent);
+}
+
+.bg__primary {
+  background: var(--color-primary);
+}
+
+.bg__dark {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.bg__light {
+  background: var(--color-light);
+}
+
+.bg__mid {
+  background: var(--color-mid);
+}
+
+.subhead {
+  font-size: var(--size-step-1);
+  font-family: var(--font-base);
+  letter-spacing: var(--uppercase-tracking);
+  text-transform: uppercase;
+}
+
+.flow-space-xl {
+  --flow-space: var(--space-xl);
+}
+
+.text__lede {
+  font-size: var(--size-step-1);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 calc(2rem / 2);
+  max-width: 100%;
+}
+
+.container .stretch {
+  max-width: 100%;
+}
+
+/* --- GLOBAL STYLES START HERE --- */
+
+body {
+  margin: 0;
+  background: var(--color-mid);
+  color: var(--color-dark-text);
+  font-size: var(--size-step-0);
+  line-height: var(--leading-standard);
+  font-family: var(--font-base);
+  font-size-adjust: from-font;
+}
+
+:is(h1, h2, h3) {
+  line-height: var(--leading-fine);
+  text-wrap: balance;
+  /* font-family: var(--font-heading); */
+  /* letter-spacing: var(--uppercase-tracking); */
+}
+
+h1 {
+  max-width: 20ch;
+  font-weight: 400;
+  font-size: var(--size-step-6);
+  font-family: var(--font-heading);
+}
+
+h2 {
+  max-width: 35ch;
+  font-size: var(--size-step-5);
+}
+
+h3 {
+  max-width: 35ch;
+  font-size: var(--size-step-4);
+}
+
+:is(h4, h5, h6) {
+  font-size: var(--size-step-3);
+}
+
+h1 + .subhead {
+  max-width: 50ch;
+}
+
+p {
+  max-width: 60ch;
+}
+
+small {
+  font-size: var(--size-step-0);
+}
+
+ins {
+  background: var(--color-primary);
+  padding-inline: 0.3em;
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+:is(code, kbd, samp) {
+  padding: 0.2em 0.2em 0.05em 0.2em;
+  font-family: var(--font-mono);
+  hyphens: none;
+  text-align: left;
+  word-break: normal;
+  word-spacing: normal;
+  tab-size: 2;
+  word-wrap: normal;
+  box-decoration-break: clone;
+}
+
+@supports not (font-size-adjust: from-font) {
+  :is(code, kbd, samp) {
+    font-size: 0.8em;
+  }
+}
+
+pre:has(code) {
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+pre code {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+kbd {
+  border: 1px solid;
+  padding-block-end: 0.1em;
+}
+
+var {
+  font-style: normal;
+  font-weight: var(--font-medium);
+}
+
+q {
+  font-style: italic;
+}
+
+table {
+  border: var(--stroke);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-weight: var(--font-bold);
+  line-height: var(--leading-fine);
+  text-align: left;
+}
+
+thead th {
+  padding-block: var(--space-s);
+}
+
+td,
+th {
+  padding: var(--space-xs) var(--space-s);
+}
+
+th:not(:only-of-type) {
+  border-block-end: var(--stroke);
+}
+
+th:only-of-type {
+  border-inline-end: var(--stroke);
+}
+
+:is(th, td) ~ :is(th, td) {
+  border-inline-start: var(--stroke);
+}
+
+tr + tr :is(th, td) {
+  border-block-start: var(--stroke);
+}
+
+caption {
+  margin-block-start: var(--space-s);
+  caption-side: bottom;
+}
+
+a:not([class]):hover {
+  text-underline-offset: 0.1lh;
+}
+
+a:not([class]) {
+  text-decoration-color: var(--color-accent);
+}
+
+:is(h1, h2, h3, h4) a:not([class]) {
+  text-decoration-thickness: 0.1ex;
+  text-underline-offset: 0.2ex;
+}
+
+:is(h1, h2, h3, h4) a:not([class]):hover {
+  text-underline-offset: 0.3ex;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-color, currentColor);
+  outline-offset: var(--focus-offset, 0.2lh);
+}
+
+/* Firefox is the only browser that doesn't outline the whole element unless you make it display: inline-block. That in itself causes multiple flow issues so we can detect it, using its own vendor prefix and reduce focus offset
+  */
+@supports (-moz-appearance: none) {
+  :root {
+    --focus-offset: 0.08em;
+  }
+}
+
+:target {
+  scroll-margin-block: 2lh;
+}
+
+::selection {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+hr {
+  margin-block: var(--flow-space, var(--space-xl));
+  border: none;
+  border-block-start: var(--hr-stroke, var(--stroke));
+}
+
+svg:not([class]) {
+  width: auto;
+  height: 1lh;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+svg[role='img'][width][height] {
+  background: var(--color-dark);
+  padding: var(--space-xs);
+  width: revert;
+  height: revert;
+}
+
+/* There's a .flow composition, but this prevents forms from having to have that applied where markup is harder to control in certain systems. It still uses the --flow-space variables though to make managing space easier */
+form > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+:is(input, select, textarea) {
+  accent-color: var(--color-primary);
+}
+
+:is(input:not([type='checkbox'], [type='radio'], [type='color']), select, textarea) {
+  border: var(--stroke-solid);
+  border-radius: var(--radius-s);
+  background: var(--color-dark-glare);
+  padding: 0.5em 0.8em;
+  width: 100%;
+  color: var(--color-light);
+
+  &::placeholder {
+    opacity: 1;
+    color: var(--color-mid);
+  }
+}
+
+label {
+  font-weight: var(--font-medium);
+  line-height: var(--leading-fine);
+}
+
+label::after {
+  content: '\A';
+  white-space: pre;
+}
+
+/* Usually label wraps checkbox and radio buttons, so we give ourselves more layout and text-flow control with flex */
+label:has(input) {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-s);
+  font-weight: var(--font-normal);
+}
+
+label:has(input) + label:has(input) {
+  --flow-space: var(--space-s-m);
+}
+
+/* Slightly adjusts the vertical position of the check/radio */
+label:has(input) input {
+  transform: translateY(-0.1ex);
+}
+
+input:disabled {
+  background: var(--color-mid);
+}
+
+input:disabled,
+label input:disabled + * {
+  cursor: not-allowed;
+}
+
+fieldset {
+  border: var(--stroke);
+  padding: var(--space-s);
+}
+
+legend {
+  padding-inline: var(--space-xs);
+  font-weight: var(--font-medium);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: var(--font-bold);
+}
+
+details[open] summary {
+  margin-block-end: var(--space-s);
+}
+
+.btngrp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-s) var(--space-m);
+  padding-block-end: var(--space-s);
+}
+
+/* COMPOSITIONS */
+
+/* ~ CLUSTER ~
+  More info: https://every-layout.dev/layouts/cluster/
+  A layout that lets you distribute items with consitent
+  spacing, regardless of their size
+  
+  CUSTOM PROPERTIES AND CONFIGURATION
+  --gutter (var(--space-m)): This defines the space
+  between each item.
+  
+  --cluster-horizontal-alignment (flex-start): How items should align
+  horizontally. Can be any acceptable flexbox aligmnent value.
+  
+  --cluster-vertical-alignment (center): How items should align vertically.
+  Can be any acceptable flexbox alignment value.
+  */
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: var(--cluster-horizontal-alignment, flex-start);
+  align-items: var(--cluster-vertical-alignment, center);
+  gap: var(--gutter, var(--space-m));
+}
+
+/* ~ FLOW COMPOSITION ~
+  Like the Every Layout stack: https://every-layout.dev/layouts/stack/
+  Info about this implementation: https://piccalil.li/blog/my-favourite-3-lines-of-css/ 
+  */
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+/* ~ AUTO GRID ~
+  Related Every Layout: https://every-layout.dev/layouts/grid/
+  More info on the flexible nature: https://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
+  A flexible layout that will create an auto-fill grid with
+  configurable grid item sizes
+  
+  CUSTOM PROPERTIES AND CONFIGURATION
+  --gutter (var(--space-m)): This defines the space
+  between each item.
+  
+  --grid-min-item-size (14rem): How large each item should be
+  ideally, as a minimum.
+  
+  --grid-placement (auto-fill): Set either auto-fit or auto-fill
+  to change how empty grid tracks are handled */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
+  gap: var(--gutter, var(--space-s-l));
+}
+
+/* A split 50/50 layout */
+.grid[data-layout='50-50'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 40vw, 33rem);
+}
+
+/* Three column grid layout */
+.grid[data-layout='thirds'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 33%, 20rem);
+}
+
+/* ~ REPEL ~
+  A little layout that pushes items away from each other where
+  there is space in the viewport and stacks on small viewports
+  
+  CUSTOM PROPERTIES AND CONFIGURATION
+  --gutter (var(--space-m)): This defines the space
+  between each item.
+  
+  --repel-vertical-alignment (center): How items should align vertically.
+  Can be any acceptable flexbox alignment value.
+  */
+
+.repel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: var(--repel--vertical-alignment, center);
+  gap: var(--gutter, var(--space-m));
+}
+
+.repel[data-nowrap] {
+  flex-wrap: nowrap;
+}
+
+/* ~ SIDEBAR ~
+  More info: https://every-layout.dev/layouts/sidebar/
+  A layout that allows you to have a flexible main content area
+  and a "fixed" width sidebar that sits on the left or right.
+  If there is not enough viewport space to fit both the sidebar
+  width *and* the main content minimum width, they will stack
+  on top of each other
+  
+  CUSTOM PROPERTIES AND CONFIGURATION
+  --gutter (var(--space-size-1)): This defines the space
+  between the sidebar and main content.
+  
+  --sidebar-target-width (20rem): How large the sidebar should be
+  
+  --sidebar-content-min-width(50%): The minimum size of the main content area
+  
+  EXCEPTIONS
+  .sidebar[data-direction='rtl']: flips the sidebar to be on the right 
+  */
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, var(--space-s-l));
+}
+
+.sidebar:not([data-direction]) > :first-child {
+  flex-grow: 1;
+  flex-basis: var(--sidebar-target-width, 20rem);
+}
+
+.sidebar:not([data-direction]) > :last-child {
+  flex-grow: 999;
+  flex-basis: 0;
+  min-width: var(--sidebar-content-min-width, 50%);
+}
+
+.sidebar[data-reversed] {
+  flex-direction: row-reverse;
+}
+
+.sidebar[data-direction='rtl'] > :last-child {
+  flex-grow: 1;
+  flex-basis: var(--sidebar-target-width, 20rem);
+}
+
+.sidebar[data-direction='rtl'] > :first-child {
+  flex-grow: 999;
+  flex-basis: 0;
+  min-width: var(--sidebar-content-min-width, 50%);
+}
+
+/* ~ SWITCHER ~
+  More info: https://every-layout.dev/layouts/switcher/
+  A layout that allows you to lay **2** items next to each other
+  until there is not enough horizontal space to allow that.
+  
+  CUSTOM PROPERTIES AND CONFIGURATION
+  --gutter (var(--space-size-1)): This defines the space
+  between each item
+  
+  --switcher-target-container-width (40rem): How large the container
+  needs to be to allow items to sit inline with each other
+  
+  --switcher-vertical-alignment (flex-start): How items should align vertically.
+  Can be any acceptable flexbox alignment value.
+  */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: var(--switcher-vertical-alignment, flex-start);
+  gap: var(--gutter, var(--space-l));
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--switcher-target-container-width, 40rem) - 100%) * 999);
+}
+
+/* Max 2 items,
+  so anything greater than 2 is full width */
+.switcher > :nth-child(n + 3) {
+  flex-basis: 100%;
+}
+
+/* ~ WRAPPER COMPOSITION ~
+  A common wrapper/container
+  */
+.wrapper {
+  position: relative;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  max-width: var(--wrapper-max-width, 1360px);
+}

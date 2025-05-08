@@ -12,8 +12,7 @@ const currentYear = new Date().getFullYear()
     </div>
     <div class="footer__copyright flow">
       <small>
-        &copy; Lauren Champs {currentYear} | Website built by me with <a href="https://astro.build/">Astro</a> using the
-        <a href="https://accessible-astro-starter.incluud.dev/">Accessible Starter Theme</a>.
+        &copy; Lauren Champs {currentYear} | Website built by me with <a href="https://astro.build/">Astro. </a>
       </small>
     </div>
     <div class="footer__acknowledgement flow">
@@ -25,47 +24,47 @@ const currentYear = new Date().getFullYear()
       </small>
     </div>
   </section>
-</footer>
 
-<style>
-  footer {
-    background-color: var(--dark-green-950);
-    padding-block: var(--space-2xl);
-    color: var(--neutral-100);
-  }
+  <style>
+    footer {
+      background-color: var(--color-dark);
+      padding-block: var(--space-2xl);
+      color: var(--color-light);
+    }
 
-  .container {
-    display: grid;
-    grid-template-rows: 1fr min-content;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-xl) var(--space-2xl);
-  }
-
-  .footer__acknowledgement {
-    grid-row: 1/-1;
-    grid-column: 2/-1;
-    align-content: end;
-  }
-
-  .footer__acknowledgement p {
-    max-width: 45ch;
-  }
-
-  .footer__copyright {
-    grid-column: 1/2;
-  }
-
-  .footer__logo {
-    max-width: 200px;
-  }
-
-  @media (max-width: 700px) {
     .container {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-rows: 1fr min-content;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-xl) var(--space-2xl);
     }
 
     .footer__acknowledgement {
-      grid-column-start: 1;
+      grid-row: 1/-1;
+      grid-column: 2/-1;
+      align-content: end;
     }
-  }
-</style>
+
+    .footer__acknowledgement p {
+      max-width: 45ch;
+    }
+
+    .footer__copyright {
+      grid-column: 1/2;
+    }
+
+    .footer__logo {
+      max-width: 200px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer__acknowledgement {
+        grid-column-start: 1;
+      }
+    }
+  </style>
+</footer>
