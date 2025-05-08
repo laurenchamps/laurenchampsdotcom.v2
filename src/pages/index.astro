@@ -14,47 +14,27 @@ import Testimonial from '../components/Testimonial.astro'
 <DefaultLayout title="Home">
   <Masthead />
   <!-- <Hero /> -->
-  <section class="my-36">
+  <section class="expectation">
     <div class="container grid grid-cols-1 gap-24 md:grid-cols-3">
       <div class="col-span-1">
-        <img class="img-offset lg:block" src="/laptop.jpeg" alt="Lauren Champs" decoding="async" />
+        <img class="lg:block" src="/laptop.jpeg" alt="Lauren Champs" decoding="async" />
       </div>
       <div class="flow col-span-2 flex flex-col items-start gap-4">
-        <h2>If you're feeling overwhelmed and weighed down by your business admin, you're in the right place.</h2>
+        <h2>
+          If you're feeling overwhelmed by admin and your systems are getting you down, you're in the right place.
+        </h2>
         <p>
           Your business is growing, but things are starting to fall through the cracks (or you're spending way too much
-          time making sure they don't) and you're not giving your clients the experience you dreamed of. You know you
-          need to get your systems sorted, but you don't know where to start.
+          time making sure they don't) and you're not giving your clients the experience you dreamed of.
         </p>
-        <p>
-          You need someone who's logical and has the technical skills to deliver, who also gets you, and what you do.
-          Someone who can explain everything without the technical jargon, and set you up to continue managing your
-          business yourself.
-        </p>
+        <!-- <p>
+          You need someone who's logical and has the technical skills to deliver, who also really gets you and what you
+          do.
+        </p> -->
         <p>
           I'll set you up with the right systems, tools and strategies to simplify your processes, free up your time and
-          deliver a client experience that truly reflects your brilliance.
+          deliver an experience for your clients that truly reflects your brilliance.
         </p>
-      </div>
-    </div>
-  </section>
-  <section class="testimonial-section my-36">
-    <div class="testimonial-container container">
-      <div class="testimonial flow">
-        <div class="avatar">
-          <img src="" alt="" />
-        </div>
-        <p class="testimonial-headline">“Working with Lauren has been a game-changer for my business.”</p>
-        <p class="testimonial-content">
-          “Lauren created a complete CRM setup tailored to my photography and video work, and it’s completely changed
-          how I operate. Everything feels smoother, more professional, and more sustainable.”
-        </p>
-        <div class="testimonial-meta">
-          <p class="testimonial-name">
-            Honey Atkinson<br />
-            <span class="testimonial-business">Honey - Photo + Film</span>
-          </p>
-        </div>
       </div>
     </div>
   </section>
@@ -62,7 +42,7 @@ import Testimonial from '../components/Testimonial.astro'
     <div class="container">
       <h2 class="mb-16">I'm here to help</h2>
       <p class="mb-12">
-        No matter how bit or small your business, I can help you level up your systems, reclaim your time and grow your
+        No matter how big or small your business, I can help you level up your systems, reclaim your time and grow your
         business.
       </p>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -88,9 +68,9 @@ import Testimonial from '../components/Testimonial.astro'
           Make, Sprout Studio and more.
         </Feature>
         <Feature name="checkboxes" title="Getting things done">
-          If you can never seem to get on top of your to-do list, let me take some of the load. Whether it's website
-          updates, file storage, inbox management, document creation, email campaigns or other support for your
-          day-to-day operations, I've got you. I cover all this in my VA (virtual assistant) support packages.
+          If you can never seem to get on top of your to-do list, let me take some of the load. Whether it's online
+          course launches, website updates, inbox management, document creation, email campaigns or other support for
+          your day-to-day operations, I've got you. I cover all this in my VA (virtual assistant) support packages.
         </Feature>
       </div>
     </div>
@@ -101,6 +81,26 @@ import Testimonial from '../components/Testimonial.astro'
         >Get in touch
         <Icon name="arrow-right" />
       </a>
+    </div>
+  </section>
+  <section class="testimonial-section">
+    <div class="testimonial-container container">
+      <div class="testimonial flow">
+        <div class="avatar">
+          <img src="/honey-atkinson.jpg" alt="Honey Atkinson" />
+        </div>
+        <p class="testimonial-headline">“Working with Lauren has been a game-changer for my business.”</p>
+        <p class="testimonial-content">
+          “Lauren created a complete CRM setup tailored to my photography and video work, and it’s completely changed
+          how I operate. Everything feels smoother, more professional, and more sustainable.”
+        </p>
+        <div class="testimonial-meta">
+          <p class="testimonial-name">
+            Honey Atkinson<br />
+            <span class="testimonial-business">Honey - Photo + Film</span>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
   <HeroVariation />
@@ -272,8 +272,8 @@ import Testimonial from '../components/Testimonial.astro'
 
 <style>
   .testimonial-section {
-    background-color: var(--neutral-100);
-    height: 600px;
+    background-color: var(--neutral-200);
+    height: 800px;
   }
 
   .testimonial-container {
@@ -287,17 +287,20 @@ import Testimonial from '../components/Testimonial.astro'
     position: relative;
     border-radius: 20px;
     background-color: #073242;
-    padding: 30px 50px;
+    padding: var(--space-xs) var(--space-xl);
     max-width: 60ch;
     color: #faf9f8;
+    font-size: var(--size-step-0);
     font-family: sans-serif;
     text-align: center;
+    text-wrap: balance;
   }
 
   .testimonial-headline {
-    margin-top: 70px;
-    color: #ff6f61;
-    font-size: 1.6rem;
+    /* margin-top: var(--space-xl); */
+    color: #ddeddb;
+    font-weight: 700;
+    font-size: var(--size-step-2);
   }
 
   /* // .testimonial-content {
@@ -306,15 +309,14 @@ import Testimonial from '../components/Testimonial.astro'
 
   .avatar {
     position: absolute;
-    top: -45px;
-    left: calc(50% - 45px);
+    top: calc(50% - 45px);
+    left: -45px;
     width: 90px;
     height: 90px;
   }
 
   .avatar img {
     border-radius: 100%;
-    background-color: hotpink;
     width: 90px;
     height: 90px;
   }
@@ -328,8 +330,18 @@ import Testimonial from '../components/Testimonial.astro'
     display: block;
     margin-top: 0.32;
     font-weight: normal;
-    font-size: 0.8em;
+    font-size: var(--size-step-00);
     letter-spacing: 0.1em;
     text-transform: uppercase;
+  }
+
+  .expectation {
+    background-color: #ffffff;
+    padding: var(--space-3xl) 0;
+    color: var(--dark-primary);
+  }
+
+  .expectation h2 {
+    font-size: var(--size-step-3);
   }
 </style>

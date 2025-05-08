@@ -39,16 +39,33 @@
   /* Sizing and spacing */
   /* FLUID TYPE SCALE */
 
+  /* @link https://utopia.fyi/type/calculator?c=320,15,1.125,1240,16,1.25,8,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|xs-l|m-l&g=s,l,xl,12 */
+
+  --size-step-000: clamp(0.64rem, 0.7758rem + -0.1752vw, 0.7407rem);
+  --size-step-00: clamp(0.8rem, 0.8449rem + -0.058vw, 0.8333rem);
+  --size-step-0: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --size-step-1: clamp(1.0547rem, 0.9868rem + 0.3397vw, 1.25rem);
+  --size-step-2: clamp(1.1865rem, 1.0557rem + 0.6539vw, 1.5625rem);
+  --size-step-3: clamp(1.3348rem, 1.1198rem + 1.0753vw, 1.9531rem);
+  --size-step-4: clamp(1.5017rem, 1.1748rem + 1.6343vw, 2.4414rem);
+  --size-step-5: clamp(1.6894rem, 1.2155rem + 2.3693vw, 3.0518rem);
+  --size-step-6: clamp(1.9006rem, 1.2348rem + 3.3289vw, 3.8147rem);
+  --size-step-7: clamp(2.1382rem, 1.2233rem + 4.5743vw, 4.7684rem);
+  --size-step-8: clamp(2.4054rem, 1.1689rem + 6.1827vw, 5.9605rem);
+
+  /* Sizing and spacing */
+  /* FLUID TYPE SCALE */
+
   /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --size-step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-  --size-step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-  --size-step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --size-step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-  --size-step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-  --size-step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-  --size-step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-  --size-step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
-  --size-step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
+  // --size-step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  // --size-step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  // --size-step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  // --size-step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  // --size-step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  // --size-step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  // --size-step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  // --size-step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+  // --size-step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
 
   /* Leading text (ratio-based leading/line-height values) */
   --leading-micro: 0.85;
