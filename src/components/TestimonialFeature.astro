@@ -1,0 +1,86 @@
+<section class="testimonial-section">
+  <div class="testimonial-container container">
+    <div class="testimonial flow">
+      <div class="avatar">
+        <img src="/honey-atkinson.jpg" alt="Honey Atkinson" />
+      </div>
+      <p class="testimonial-headline">“Working with Lauren has been a game-changer for my business.”</p>
+      <p class="testimonial-content">
+        “Lauren created a complete CRM setup tailored to my photography and video work, and it’s completely changed how
+        I operate. Everything feels smoother, more professional, and more sustainable.”
+      </p>
+      <div class="testimonial-meta">
+        <p class="testimonial-name">
+          Honey Atkinson<br />
+          <span class="testimonial-business">Honey - Photo + Film</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-section {
+    background-color: var(--color-light);
+    height: 800px;
+  }
+
+  .testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .testimonial {
+    position: relative;
+    border-radius: 20px;
+    background-color: var(--color-dark);
+    padding: var(--space-xs) var(--space-xl);
+    max-width: 60ch;
+    color: var(--color-light);
+    font-size: var(--size-step-0);
+    font-family: sans-serif;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .testimonial-headline {
+    /* margin-top: var(--space-xl); */
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: var(--size-step-2);
+  }
+
+  /* // .testimonial-content {
+//   font-size: 1.1rem;
+// } */
+
+  .avatar {
+    position: absolute;
+    top: calc(50% - 45px);
+    left: -45px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .avatar img {
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+  }
+
+  .testimonial-name {
+    margin-top: 2rem;
+    font-weight: bold;
+  }
+
+  .testimonial-business {
+    display: block;
+    margin-top: 0.32;
+    font-weight: normal;
+    font-size: var(--size-step-00);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+</style>

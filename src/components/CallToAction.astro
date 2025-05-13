@@ -1,30 +1,22 @@
-<div class="container">
-  <div class="call-to-action mt-24 mb-32 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24">
-    <h2 class="text-center text-3xl md:text-5xl">Get this theme on GitHub</h2>
-    <a href="https://github.com/markteekman/accessible-astro-starter" class="text-center text-lg"> Use this theme</a>
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<section class="cta-section">
+  <div class="repel container">
+    <h2>Ready to reduce your mental load and spend more time on growing your business?</h2>
+    <div>
+      <a class="button has-icon" href="/quote"
+        >Let's do it
+        <Icon name="arrow-right" />
+      </a>
+    </div>
   </div>
-</div>
+</section>
 
 <style lang="scss">
-  .call-to-action {
-    color: var(--neutral-900);
-    background-image: linear-gradient(40deg, var(--primary-100), var(--secondary-200));
-  }
-
-  .call-to-action a:not(button),
-  .call-to-action a:not(button):visited {
-    padding: 1rem;
-    color: var(--neutral-900);
-    font-weight: bold;
-    border: 3px solid var(--neutral-900);
-    border-radius: 3px;
-    text-decoration: none;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-
-    &:where(:hover, :focus) {
-      color: var(--neutral-100);
-      background-color: var(--neutral-900);
-      text-decoration: underline;
-    }
+  .cta-section {
+    background-color: var(--color-mid);
+    padding: var(--space-4xl) 0;
   }
 </style>

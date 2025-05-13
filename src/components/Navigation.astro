@@ -288,9 +288,16 @@ const { name = 'logo-l' } = Astro.props
 
         a,
         button {
-          font-size: 1.125rem;
+          font-size: var(--size-step-0);
           line-height: 1.6875rem;
           text-decoration: none;
+        }
+
+        a.menu-cta {
+          font-size: var(--size-step-00);
+          letter-spacing: var(--uppercase-tracking);
+          text-decoration: none;
+          text-transform: uppercase;
         }
 
         a:hover,
@@ -299,8 +306,8 @@ const { name = 'logo-l' } = Astro.props
         .has-dropdown > button:hover,
         .has-dropdown > button:focus {
           text-decoration: underline;
-          text-decoration-color: var(--accent-300);
-          text-decoration-thickness: 1px;
+          text-decoration-color: var(--color-accent);
+          text-decoration-thickness: 2px;
           text-underline-offset: 7px;
         }
 

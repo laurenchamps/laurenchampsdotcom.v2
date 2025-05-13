@@ -1,0 +1,54 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+---
+
+<DefaultLayout title="Request a Quote">
+  <section class="container">
+    <hr class="ribbon" />
+    <p class="subhead mb-6">Request a quote</p>
+    <div class="flow">
+      <h1>Ready to streamline your business?</h1>
+      <p>
+        Just fill out the form and I'll be in touch about the next steps (probably a free 30 minute consultation call)
+        so I can get to know more about your goals and give you an accurate quote.
+      </p>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <iframe
+        data-tally-src="https://tally.so/embed/wayPyy?alignLeft=1&hideTitle=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="519"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Request a quote
+          "></iframe>
+      <script>
+        var d = document,
+          w = 'https://tally.so/widgets/embed.js',
+          v = function () {
+            'undefined' != typeof Tally
+              ? Tally.loadEmbeds()
+              : d.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function (e) {
+                  e.src = e.dataset.tallySrc
+                })
+          }
+        if ('undefined' != typeof Tally) v()
+        else if (d.querySelector('script[src="' + w + '"]') == null) {
+          var s = d.createElement('script')
+          ;(s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s)
+        }
+      </script>
+    </div>
+  </section>
+  <section class="flow container">
+    <p class="mb-12">
+      Not a fan of forms? No worries, <a href="mailto:hello@laurenchamps.com">drop me an email</a> instead.
+    </p>
+  </section>
+</DefaultLayout>
+
+<style></style>
