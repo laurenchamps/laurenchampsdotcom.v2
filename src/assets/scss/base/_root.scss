@@ -28,10 +28,11 @@
   --radius-l: 2.5rem;
   --uppercase-tracking: 0.04ch;
   --wrapper-max-width: 1360px;
-  --ribbon-color: var(--color-dark);
+  --ribbon-color: var(--color-primary);
   --logo-name: var(--color-dark);
   --logo-loop: var(--color-mid);
   --logo-badge: var(--color-primary);
+  --flow-space: var(--space-l);
 
   /* Sizing and spacing */
   /* FLUID TYPE SCALE */
@@ -165,23 +166,23 @@ ideally, as a minimum.
 --grid-placement (auto-fill): Set either auto-fit or auto-fill
 to change how empty grid tracks are handled */
 
-// .grid {
-//   display: grid;
-//   grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
-//   gap: var(--gutter, var(--space-s-l));
-// }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
+  gap: var(--gutter, var(--space-s-l));
+}
 
 // /* A split 50/50 layout */
-// .grid[data-layout='50-50'] {
-//   --grid-placement: auto-fit;
-//   --grid-min-item-size: clamp(16rem, 40vw, 33rem);
-// }
+.grid[data-layout='50-50'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 40vw, 33rem);
+}
 
 // /* Three column grid layout */
-// .grid[data-layout='thirds'] {
-//   --grid-placement: auto-fit;
-//   --grid-min-item-size: clamp(16rem, 33%, 20rem);
-// }
+.grid[data-layout='thirds'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 33%, 20rem);
+}
 
 /* ~ REPEL ~
 A little layout that pushes items away from each other where
