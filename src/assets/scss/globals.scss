@@ -27,6 +27,7 @@
 
 .ribbon {
   margin-block-start: 0;
+  border-block-start: none;
   background-color: var(--ribbon-color);
   width: 100%;
   height: var(--space-s);
@@ -35,4 +36,12 @@
 .lede-text {
   font-weight: 500;
   font-size: var(--size-step-3);
+}
+
+.heading-text {
+  max-width: 22ch;
+  font-weight: 200;
+  font-size: var(--size-step-5);
+  line-height: var(--leading-flat);
+  text-wrap: balance;
 }

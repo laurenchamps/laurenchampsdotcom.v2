@@ -46,9 +46,11 @@ import CallToAction from '../components/CallToAction.astro'
     </div>
   </section>
   <section id="services">
-    <div class="flow container">
-      <h2>I'm here to help</h2>
-      <p>No matter how big or small your business, I can help you level up your systems so you can thrive.</p>
+    <div class="services-container container">
+      <div class="flow">
+        <h2>I'm here to help</h2>
+        <p>No matter how big or small your business, I can help you level up your systems so you can thrive.</p>
+      </div>
       <div class="grid" data-layout="thirds">
         <Feature name="workflow" title="Workflow optimisation">
           I can analyse your current processes to identify bottlenecks, double-handling and opportunities to streamline
@@ -63,20 +65,21 @@ import CallToAction from '../components/CallToAction.astro'
           connecting with third-party tools like Make or Zapier.
         </Feature>
         <!-- <Feature name="books" title="Documentation">
-            Do your processes only exist in your head? I'll help you lighten the mental load by creating a set of
-            lightweight guides that document what you do, how you do it, and when to take action.
-          </Feature>
-          <Feature name="canvas" title="Training">
-            If you're struggling to use some of your existing tools or feel like you could be getting more out of them if
-            you knew a bit more. I have experience with Notion, Asana, Squarespace, Google Workspace, Kajabi, Zapier,
-            Make, Sprout Studio and more.
-          </Feature> -->
+          Do your processes only exist in your head? I'll help you lighten the mental load by creating a set of
+          lightweight guides that document what you do, how you do it, and when to take action.
+        </Feature>
+        <Feature name="canvas" title="Training">
+          If you're struggling to use some of your existing tools or feel like you could be getting more out of them if
+          you knew a bit more. I have experience with Notion, Asana, Squarespace, Google Workspace, Kajabi, Zapier,
+          Make, Sprout Studio and more.
+        </Feature> -->
         <!-- <Feature name="checkboxes" title="Getting things done">
-            If you can never seem to get on top of your to-do list, let me take some of the load. Whether it's online
-            course launches, website updates, inbox management, document creation, email campaigns or other support for
-            your day-to-day operations, I've got you. I cover all this in my VA (virtual assistant) support packages.
-          </Feature> -->
+          If you can never seem to get on top of your to-do list, let me take some of the load. Whether it's online
+          course launches, website updates, inbox management, document creation, email campaigns or other support for
+          your day-to-day operations, I've got you. I cover all this in my VA (virtual assistant) support packages.
+        </Feature> -->
       </div>
+
       <!-- <p>
           If you can never seem to get on top of your to-do list, let me take some of the load. Whether it's online
           course launches, website updates, inbox management, document creation, email campaigns or other support for
@@ -221,8 +224,7 @@ import CallToAction from '../components/CallToAction.astro'
   </section> -->
   <section class="testimonial-multiple">
     <div class="container">
-      <!-- <h2 class="mb-16">What it's like to work with me</h2> -->
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-2">
+      <div class="grid" data-layout="50-50">
         <Testimonial name="Nadine Brown" title="Founder, The Ivy Institute">
           <div class="testimonial__text flow">
             <h3>“I feel incredibly supported by Lauren, she just gets it!”</h3>
@@ -256,17 +258,6 @@ import CallToAction from '../components/CallToAction.astro'
       </div>
     </div>
   </section>
-  <!-- <section class="mb-32 mt-64">
-    <div class="container">
-      <h2 class="mb-16 text-6xl">Counters</h2>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="520" title="Stars" sub="On GitHub" />
-        <Counter count="17" title="Accessible" sub="Components" />
-        <Counter count="500" title="Commits" sub="Merged" />
-        <Counter count="18+" title="Months" sub="Since launch" />
-      </div>
-    </div>
-  </section> -->
   <CallToAction />
 </DefaultLayout>
 
@@ -306,5 +297,11 @@ import CallToAction from '../components/CallToAction.astro'
     background-color: var(--color-mid);
     padding: var(--space-4xl) 0;
     --gutter: var(--space-m);
+  }
+
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
   }
 </style>

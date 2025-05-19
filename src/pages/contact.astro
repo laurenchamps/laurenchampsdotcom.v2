@@ -2,12 +2,13 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 ---
 
-<DefaultLayout title="Contact ">
-  <section>
-    <div class="flow container">
-      <hr class="ribbon" />
-      <h1>Contact</h1>
-      <p>Have a question or want to work together? Just fill out the form and we'll get started.</p>
+<DefaultLayout title="Request a Quote">
+  <section class="container">
+    <hr class="ribbon" />
+    <h1 class="subhead mb-6">Contact</h1>
+    <div class="flow">
+      <p class="heading-text">Have a question or want to work together?</p>
+      <p>Fill out the form here and I'll be in touch.</p>
     </div>
   </section>
   <section class="my-12">
@@ -21,7 +22,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
         marginheight="0"
         marginwidth="0"
         title="Contact form
-        "></iframe>
+      "></iframe>
       <script>
         var d = document,
           w = 'https://tally.so/widgets/embed.js',
@@ -40,8 +41,10 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
       </script>
     </div>
   </section>
-  <section class="container">
-    <p>Not a fan of forms? No worries, <a href="mailto:hello@laurenchamps.com">drop me an email</a> instead.</p>
+  <section class="flow container">
+    <p class="mb-12">
+      Not a fan of forms? No worries, <a href="mailto:hello@laurenchamps.com">drop me an email</a> instead.
+    </p>
   </section>
 </DefaultLayout>
 
