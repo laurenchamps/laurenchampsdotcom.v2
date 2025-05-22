@@ -9,18 +9,20 @@ const currentYear = new Date().getFullYear()
     <div class="footer__contact">
       <div class="footer__logo"><img src="/horizontal-logo-dk-bg.svg" alt="Lauren Champs" /></div>
       <p><a href="mailto:hello@laurenchamps.com">hello@laurenchamps.com</a></p>
+      <p>📍Kaurna Yarta | Adelaide, Australia</p>
     </div>
-    <div class="footer__copyright flow">
-      <small>
-        &copy; Lauren Champs {currentYear} | Website built by me with <a href="https://astro.build/">Astro. </a>
-      </small>
-    </div>
+
     <div class="footer__acknowledgement flow">
       <small
         >I live and work on the stolen lands of the Kaurna people. I pay my respects to Kaurna Elders past and present,
         and acknowledge the deep and ongoing connection the Kaurna people have to their land, water and cultural
         practices. I acknowledge all Indigenous peoples around the world whose lands and cultures have been devastated
         by colonisation.
+      </small>
+    </div>
+    <div class="footer__copyright flow">
+      <small>
+        &copy; Lauren Champs {currentYear} | Website built by me with <a href="https://astro.build/">Astro. </a>
       </small>
     </div>
   </section>
@@ -58,13 +60,24 @@ const currentYear = new Date().getFullYear()
       max-width: 200px;
     }
 
-    @media (max-width: 700px) {
+    /* @media (max-width: 700px) {
       .container {
         grid-template-columns: 1fr;
       }
 
       .footer__acknowledgement {
         grid-column-start: 1;
+      }
+
+      .footer__contact {
+        grid-row-start: 1;
+      }
+    } */
+
+    @media (max-width: 700px) {
+      .container {
+        display: flex;
+        flex-direction: column;
       }
     }
   </style>
