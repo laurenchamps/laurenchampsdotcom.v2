@@ -14,14 +14,22 @@ const { src = '/lc-headshot-blob.jpg' } = Astro.props
           <Icon name="arrow-right" />
         </a>
       </div>
-      <div>
-        <img src="/laptop-and-plants-sq.jpg" alt="" decoding="async" />
+      <div class="img-container">
+        <img class="img-headshot image" src="/lauren-sitting-at-desk-3.jpg" alt="" decoding="async" />
       </div>
     </div>
   </div>
 </section>
 
 <style lang="scss">
+  .img-container {
+    justify-items: center;
+  }
+
+  .switcher {
+    --gutter: var(--space-m);
+  }
+
   .about-section {
     background-color: var(--color-mid);
     padding: var(--space-4xl) 0;

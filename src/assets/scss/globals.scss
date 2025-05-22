@@ -20,7 +20,7 @@
 }
 
 .subhead {
-  font-size: 1.1rem;
+  font-size: var(--size-step-1);
   letter-spacing: 0.3;
   text-transform: uppercase;
 }
@@ -44,4 +44,12 @@
   font-size: var(--size-step-5);
   line-height: var(--leading-flat);
   text-wrap: balance;
+}
+
+.img-headshot {
+  max-height: 500px;
+}
+
+.image {
+  border-radius: var(--radius-m);
 }

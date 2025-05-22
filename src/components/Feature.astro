@@ -5,12 +5,10 @@ const { name = 'doc-magnifying', title = 'Title' } = Astro.props
 ---
 
 <div class="feature flex flex-col gap-4">
-  <Icon name={name} />
+  <Icon name={name} class="icon" />
   <div class="content flow">
     <h3 class="text-3xl font-bold">{title}</h3>
-    <p>
-      <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, corporis.</slot>
-    </p>
+    <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, corporis.</slot>
   </div>
 </div>
 

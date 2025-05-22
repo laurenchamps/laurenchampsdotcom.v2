@@ -9,39 +9,28 @@ import ContentMedia from '../components/ContentMedia.astro'
   <section>
     <div class="flow container">
       <hr class="ribbon" />
-      <div class="grid grid-cols-3 items-center gap-20">
+      <h1>About</h1>
+      <div class="grid" data-layout="thirds">
         <div class="col-span-2 flex flex-col items-center gap-8 md:items-start">
-          <h1>About</h1>
-          <p>I''</p>
-          <p>Solving problems and learning new things is something I've always loved to do. As a kid ..</p>
           <p>
-            As an adult, I've gone where my curiosity has taken me - I worked for 15 years in universities and it was
-            there that I discovered my knack for working with systems. Before starting my own business, I built up
-            experience from 15+ years the higher education sector. A common thread running through these roles was
-            always being the one who knew how things worked, the Excel wizard, the one who was good with that new bit of
-            technology.
+            A broken process is the kind of thing that keeps me up at night. Yep, I'm that person. If there's a problem
+            to be solved, I'll be trying to solve it. It helps that I've always loved learning because to me a problem
+            is just another opportunity to learn something new.
           </p>
           <p>
-            Throughout my life I have been driven by curiosity – not one to be defined by any job role, I've sought to
-            find opportunities to keep learning, to develop skills, and to use those skills in a meaningful way. Helping
-            small business owners achieve their goals gives me a huge sense of satisfaction.
+            Learning new skills, building and fixing things aren't confined to my work life - when I'm not on my laptop
+            you'll likely find me making my own clothes with a sewing machine or knitting needles, heading out on a
+            bushwalk or relaxing with a cup of tea and a good book.
           </p>
-          <p>
-            This curiosity is not confined to my work life – when I'm not at my laptop you can often find me sewing,
-            knitting, reading or out exploring the world around me on a bushwalk.
-          </p>
-          <p>
-            Why do I do it? because I want you to succeed and I love nothing more than getting stuck into systems,
-            building automations, and creating order from chaos.
-          </p>
-          <p></p>
         </div>
-        <img class="lg:block" src="/lc-headshot-pink-circle.png" alt="Lauren Champs" decoding="async" />
+        <div class="headshot">
+          <img class="image lg:block" src="/lauren-headshot-square.jpg" alt="Lauren Champs" decoding="async" />
+        </div>
       </div>
     </div>
   </section>
-  <section class="my-36">
-    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
+  <section class="values">
+    <div class="container grid" data-layout="50-50">
       <div class="flex flex-col items-start gap-4">
         <h2>My values</h2>
       </div>
@@ -69,10 +58,10 @@ import ContentMedia from '../components/ContentMedia.astro'
       </div>
     </div>
   </section>
-  <section class="mb-16 mt-32" id="qualifications">
-    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
-      <div class="flex flex-col items-start gap-4">
-        <h2 class="text-5xl font-light">My qualifications</h2>
+  <section class="qualifications" id="qualifications">
+    <div class="container grid" data-layout="thirds">
+      <div>
+        <h2>My qualifications</h2>
       </div>
       <div class="space-content">
         <ul>
@@ -80,14 +69,14 @@ import ContentMedia from '../components/ContentMedia.astro'
             15+ years in administrative roles in universities spanning IT project delivery, research systems, web +
             digital content management and customer service
           </li>
-          <li>5+ years supporting a local small business with online order fulfilment</li>
+          <li>5+ years supporting a local creative business with online order fulfilment</li>
           <li>
             Countless hours researching, learning and using automation, task management, project management & platforms
-            including <a href="https://www.make.com/en">Make</a>, <a href="https://www.notion.com/">Notion</a>, <a
-              href="https://app.asana.com/">Asana</a
-            >, <a href="https://zapier.com/">Zapier</a>, <a href="https://www.squarespace.com/">Squarespace</a>, <a
-              href="https://getsproutstudio.com/">Sprout Studio</a
-            >, <a href="https://kajabi.com/">Kajabi</a> and more
+            including <a href="https://www.notion.com/">Notion</a>, <a href="https://app.asana.com/">Asana</a>, <a
+              href="https://zapier.com/">Zapier</a
+            >, <a href="https://www.squarespace.com/">Squarespace</a>, <a href="https://getsproutstudio.com/"
+              >Sprout Studio</a
+            >, <a href="https://kajabi.com/">Kajabi</a>, <a href="https://www.make.com/en">Make</a> and more
           </li>
           <li>
             <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science"
@@ -110,3 +99,21 @@ import ContentMedia from '../components/ContentMedia.astro'
     <Badges />
   </section>
 </DefaultLayout>
+
+<style>
+  .values,
+  .qualifications {
+    padding: var(--space-l-3xl) 0;
+  }
+
+  .headshot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headshot img {
+    display: block;
+    max-width: 80%;
+  }
+</style>

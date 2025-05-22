@@ -4,9 +4,17 @@ import { Icon } from 'astro-icon/components'
 
 <div class="masthead">
   <div class="masthead__content container">
-    <h1 class="masthead__heading">
-      Systems strategy and workflow automation for small business owners who want to reclaim their time.
-    </h1>
+    <div class="masthead__heading flow">
+      <p class="subhead">Hi, I'm Lauren</p>
+      <h1>I help small business owners streamline systems and turn chaos into calm.</h1>
+    </div>
+    <div class="masthead__photo">
+      <img
+        class="masthead__img image"
+        src="lauren-headshot-2.jpg"
+        alt="Lauren Champs sitting at her desk and smiling at the camera"
+      />
+    </div>
     <!-- <p class="subhead masthead__subhead">
       Helping you get your back of house in order and level up your client experience.
     </p> -->
@@ -21,23 +29,57 @@ import { Icon } from 'astro-icon/components'
   <style>
     .masthead {
       background-color: var(--color-mid);
-      height: calc(100vh - 10rem);
+    }
+
+    .subhead {
+      max-width: 50ch;
     }
 
     .masthead__content {
-      display: grid;
-      grid-template-rows: 10% minmax(min-content, 16rem) minmax(min-content, 16rem) 1fr;
-      gap: 2.5em 1.5vi;
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 0var (--space-s);
     }
 
-    .masthead__heading {
-      grid-row: 2/3;
+    .masthead__img {
+      border-radius: var(--radius-m);
+      max-height: 25rem;
     }
 
-    .masthead__btngrp {
-      grid-row: 3/-1;
-      justify-content: start;
+    @media (min-width: 900px) {
+      .masthead__content {
+        display: grid;
+        grid-template-rows: 10% minmax(min-content, 16rem) minmax(min-content, 16rem) 1fr;
+        grid-template-columns: 1fr minmax(min-content, 20rem);
+        gap: 2.5em 2.7vi;
+        height: 100%;
+      }
+
+      .masthead {
+        height: calc(100vh - 10rem);
+      }
+
+      .masthead__heading {
+        grid-row: 2/3;
+      }
+
+      .masthead__photo {
+        grid-row-end: 3;
+        grid-column: 2;
+      }
+
+      .masthead__btngrp {
+        grid-row: 3/-1;
+        justify-content: start;
+      }
+
+      .masthead__subhead {
+        grid-row-start: 3;
+        /* grid-column: 1/-1; */
+      }
     }
 
     /* .masthead__heading {
@@ -46,12 +88,7 @@ import { Icon } from 'astro-icon/components'
       margin-block-start: var(--space-m-xl);
     } */
 
-    .masthead__subhead {
-      grid-row-start: 3;
-      /* grid-column: 1/-1; */
-    }
-
-    .bg-img {
+    /* .bg-img {
       position: relative;
       background: url(laptop-and-plant.jpeg) no-repeat center center fixed;
       -webkit-background-size: cover;
@@ -68,6 +105,6 @@ import { Icon } from 'astro-icon/components'
       inset: 0;
       background-color: var(--bg-color);
       content: '';
-    }
+    } */
   </style>
 </div>
