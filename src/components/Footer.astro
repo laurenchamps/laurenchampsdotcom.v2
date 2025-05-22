@@ -21,46 +21,49 @@ const currentYear = new Date().getFullYear()
       </small>
     </div>
     <div class="footer__copyright flow">
-      <small>
-        &copy; Lauren Champs {currentYear} | Website built by me with <a href="https://astro.build/">Astro. </a>
-      </small>
+      <>
+        <small>
+          &copy; Lauren Champs {currentYear} | <a href="/privacy">Privacy policy</a><br />Website built by me with <a
+            href="https://astro.build/">Astro</a
+          >
+        </small>
+      </>
     </div>
-  </section>
 
-  <style>
-    footer {
-      background-color: var(--color-dark);
-      padding-block: var(--space-2xl);
-      color: var(--color-light);
-      font-size: var(--size-step-0);
-    }
+    <style>
+      footer {
+        background-color: var(--color-dark);
+        padding-block: var(--space-2xl);
+        color: var(--color-light);
+        font-size: var(--size-step-0);
+      }
 
-    .container {
-      display: grid;
-      grid-template-rows: 1fr min-content;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-xl) var(--space-2xl);
-    }
+      .container {
+        display: grid;
+        grid-template-rows: 1fr min-content;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xl) var(--space-2xl);
+      }
 
-    .footer__acknowledgement {
-      grid-row: 1/-1;
-      grid-column: 2/-1;
-      align-content: end;
-    }
+      .footer__acknowledgement {
+        grid-row: 1/-1;
+        grid-column: 2/-1;
+        align-content: end;
+      }
 
-    .footer__acknowledgement p {
-      max-width: 45ch;
-    }
+      .footer__acknowledgement p {
+        max-width: 45ch;
+      }
 
-    .footer__copyright {
-      grid-column: 1/2;
-    }
+      .footer__copyright {
+        grid-column: 1/2;
+      }
 
-    .footer__logo {
-      max-width: 200px;
-    }
+      .footer__logo {
+        max-width: 200px;
+      }
 
-    /* @media (max-width: 700px) {
+      /* @media (max-width: 700px) {
       .container {
         grid-template-columns: 1fr;
       }
@@ -74,11 +77,12 @@ const currentYear = new Date().getFullYear()
       }
     } */
 
-    @media (max-width: 700px) {
-      .container {
-        display: flex;
-        flex-direction: column;
+      @media (max-width: 700px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+        }
       }
-    }
-  </style>
+    </style>
+  </section>
 </footer>
