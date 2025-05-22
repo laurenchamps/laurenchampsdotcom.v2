@@ -29,6 +29,7 @@ import { Icon } from 'astro-icon/components'
   <style>
     .masthead {
       background-color: var(--color-mid);
+      padding: var(--space-2xl) (--space-m);
     }
 
     .subhead {
@@ -41,12 +42,16 @@ import { Icon } from 'astro-icon/components'
       justify-content: center;
       align-items: center;
       gap: 2rem;
-      padding: 0var (--space-s);
+      padding-top: var(--space-xl);
     }
 
     .masthead__img {
       border-radius: var(--radius-m);
       max-height: 25rem;
+    }
+
+    .masthead__photo {
+      padding-bottom: var(--space-xl);
     }
 
     @media (min-width: 900px) {
@@ -55,6 +60,7 @@ import { Icon } from 'astro-icon/components'
         grid-template-rows: 10% minmax(min-content, 16rem) minmax(min-content, 16rem) 1fr;
         grid-template-columns: 1fr minmax(min-content, 20rem);
         gap: 2.5em 2.7vi;
+        padding-top: 0;
         height: 100%;
       }
 
@@ -69,6 +75,7 @@ import { Icon } from 'astro-icon/components'
       .masthead__photo {
         grid-row-end: 3;
         grid-column: 2;
+        padding-bottom: 0;
       }
 
       .masthead__btngrp {
