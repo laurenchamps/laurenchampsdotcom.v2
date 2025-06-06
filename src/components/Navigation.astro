@@ -10,10 +10,13 @@ const { name = 'logo-l' } = Astro.props
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
-    <a href="/" class="!no-underline">
-      <!-- <Icon name="logo-l" alt="Lauren Champs" width="47" height="47" /> -->
-      <Icon name="lc-wordmark-mod" alt="Lauren Champs" height="100" width="260" />
-    </a>
+    <div class="wrapper">
+      <a href="/" class="header-logo !no-underline">
+        <!-- <Icon name="logo-l" alt="Lauren Champs" width="47" height="47" /> -->
+        <Icon name="logo-brick" alt="Lauren Champs" height="100" width="100" />
+        <!-- <p class="logo-name">Lauren Champs</p> -->
+      </a>
+    </div>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
         <ul class="menu">
@@ -222,6 +225,16 @@ const { name = 'logo-l' } = Astro.props
 <style lang="scss" is:global>
   @use '../assets/scss/base/breakpoint' as *;
   @use '../assets/scss/base/outline' as *;
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .logo-name {
+    font-size: var(--size-step-2);
+  }
 
   #main-navigation {
     > .container {
