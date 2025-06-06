@@ -64,6 +64,9 @@ import ContentMedia from '../components/ContentMedia.astro'
       </div>
     </div>
   </section>
+  <section class="container">
+    <Badges />
+  </section>
   <section class="qualifications" id="qualifications">
     <div class="container grid" data-layout="thirds">
       <div>
@@ -101,15 +104,12 @@ import ContentMedia from '../components/ContentMedia.astro'
       </div>
     </div>
   </section>
-  <section class="container">
-    <Badges />
-  </section>
 </DefaultLayout>
 
 <style>
   .values,
   .qualifications {
-    padding: var(--space-l-3xl) 0;
+    padding: var(--space-m-xl) 0;
   }
 
   .headshot {
