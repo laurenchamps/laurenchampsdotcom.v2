@@ -24,6 +24,17 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon-brick.svg" />
 
     <SiteMeta title={title} description={description.substring(0, 100)} url={url} image={image} author={author} />
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-ENPWDYP70L"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-ENPWDYP70L')
+    </script>
   </head>
   <body>
     <Header />
